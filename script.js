@@ -1,136 +1,340 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Malik Jalal Tools Hub | 417+ Premium Tools</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+// ╔══════════════════════════════════╗
+// ║  MALIK JALAL TOOLS HUB v18    ║
+// ║  417+ TOOLS + ALL FEATURES    ║
+// ╚══════════════════════════════════╝
+var MU='malikjalal514',MP='malik@1122',AP='malikrakhana',SK='mjt_v18',UK='mju_v18',LOGOK='mj_logo_v18',BGK='mj_bg_v18',AUDK='mj_audio_v18',LOGINPAGEK='mj_loginpage_v18',LOGINBGK='mj_loginbg_v18';
+var li=false,im=false,ia=false,cc='all',cu=null,bgAudio=null,defaultLogo='https://cdn.phototourl.com/member/2026-06-14-0b9a8795-57a5-4e7c-b42a-276c35844a80.jpg';
 
-<video id="bgVideo" loop muted playsinline autoplay></video>
+// ⭐ 417+ TOOLS
+var dT=[
+  {name:'Quran Pak',url:'https://malikjalal-quranpak.edgeone.app',cat:'islamic'},
+  {name:'Malik Jalal GPT',url:'https://malikjalalgpt.edgeone.app',cat:'ai'},
+  {name:'Live TV 90+ Channels',url:'https://malikjalallivetv.edgeone.app',cat:'tv'},
+  {name:'Complete Python Course 100GB',url:'https://indianshortner.in/MHPBl',cat:'dev'},
+  {name:'Angela Yu Web Development',url:'https://drive.google.com/drive/folders/1S4ltJD-ECWVItvUKx5y9eCTSKvopO1yG',cat:'dev'},
+  {name:'101 Python Projects 2025',url:'https://drive.google.com/drive/folders/1f7Bfa2uGdiEtWrp1ttx0c64Cl5E-bl7O',cat:'dev'},
+  {name:'FlutterFlow No-Code Apps',url:'https://drive.google.com/drive/folders/1gGjObpEcPt9OhLl8fBreq6Bp_CFhQcuK',cat:'dev'},
+  {name:'Django Portfolio Course',url:'https://drive.google.com/drive/folders/1YYV7ps-McCawO09Ecr9HNcT4xh0xJ7yk',cat:'dev'},
+  {name:'Android Studio Productivity',url:'https://drive.google.com/drive/folders/12ZEbQT2Wa1fjQI3hMJ9ePD3XcMaC2gpU',cat:'dev'},
+  {name:'Ubuntu Linux Server Series',url:'https://drive.google.com/drive/folders/1bYPHUemlakJ-FnJ11mN7yTMi346G4Tmn',cat:'dev'},
+  {name:'Git & GitHub for VS Code',url:'https://drive.google.com/drive/folders/1ko1QtFDiVjzJV6P9gPhpYGGhHM-x3nJH',cat:'dev'},
+  {name:'Self Web Hosting at Home',url:'https://drive.google.com/drive/folders/175UuNLdZrHSBaKH_kSLw9U0ZwzQmxX97',cat:'dev'},
+  {name:'Nginx Server from Scratch',url:'https://drive.google.com/drive/folders/1AU2OQ_GNJcIu0rWd2nZyGFarsNIvOtF7',cat:'dev'},
+  {name:'Applied DeepSeek AI Projects',url:'https://drive.google.com/drive/folders/1e2GoT2CFXCJQBJgzpbsW7B-1zrnm_Zaa',cat:'ai'},
+  {name:'Create VPS/RDP/Proxy Service',url:'https://drive.google.com/drive/folders/1o1PHtI3sVavik4BjpVgyXwfZHAm-epn7',cat:'dev'},
+  {name:'Facebook ID Blue Tick Method',url:'https://facebook-free-blue-tick-generator.vercel.app/',cat:'hacking'},
+  {name:'Instagram ID Hack Blueprint',url:'https://instagram-free-blue-tick-flax.vercel.app/',cat:'hacking'},
+  {name:'Professor Death RAT APK',url:'https://www.mediafire.com/file/n2k6m967jdmw4m2/PROFESSOR+DEATH.apk/file',cat:'hacking'},
+  {name:'IP Tracking Tool Private',url:'https://chuhan-iptracking-tool.pages.dev/',cat:'hacking'},
+  {name:'Wingo Hack Tool V4',url:'https://uk-hacker.f-s.workers.dev/c9si74d',cat:'hacking'},
+  {name:'Gmail Phishing Tutorial',url:'https://youtu.be/Debhn1SiFaw?si=-Qh9qZjj4S22J_oN',cat:'hacking'},
+  {name:'Adobe 4 Month Trial Method',url:'https://www.facebook.com/share/v/16o6oiUyyA/',cat:'hacking'},
+  {name:'SMS Bomber Dark Zone',url:'https://dark-zone-toolkit.vercel.app/Sms-Bomber.html',cat:'hacking'},
+  {name:'DeepSeek Zero to Hero',url:'https://drive.google.com/drive/folders/1dc9yRhg8ecqousuWvEPxz9sa5guSAO5x',cat:'ai'},
+  {name:'Midjourney/Dall-E AI Art',url:'https://drive.google.com/drive/folders/1L0ezbn-zTHIgOGNC22_giH4kd45ofpvU',cat:'ai'},
+  {name:'ChatGPT Money Making 2025',url:'https://drive.google.com/drive/folders/1pPsK7E9hvhfumcvybDhfbNEoSJs5nSax',cat:'ai'},
+  {name:'YouTube Automation Awais',url:'https://drive.google.com/drive/folders/1JT6504E_J3Jggcbp53mvSkxeFjyyj6lc',cat:'ai'},
+  {name:'AI Video Mastery Course',url:'https://drive.google.com/drive/folders/1G5i40KToPgP3XejFkOqdQLbpuTGyasIo',cat:'ai'},
+  {name:'AI Prompt Playbook 2025',url:'https://drive.google.com/drive/folders/1g7fKk0MXtIN-oPrFM1LdqRLqdWYRNa5x',cat:'ai'},
+  {name:'Faceless YouTube Automation',url:'https://drive.google.com/drive/folders/11OGUlOkkEo3tIGNQs5tAewLdp0v7bhh9',cat:'ai'},
+  {name:'Instagram Content Monetization AI',url:'https://drive.google.com/drive/folders/1tI0Ik-VsyDP1q5B1URqzybqwwVhJWYZA',cat:'ai'},
+  {name:'YouTube Shorts Automation',url:'https://drive.google.com/drive/folders/1C5cu5D0eleVZXS82Y69-ztQ2feG-wPXb',cat:'ai'},
+  {name:'Amazon AI Passive Income',url:'https://drive.google.com/drive/folders/18Bf7nouiw5sZGdApPdEgbhpK60VgW8gV',cat:'earning'},
+  {name:'Etsy Profits $11k/Month',url:'https://drive.google.com/drive/folders/1VJxvXZUYSvmLK1ewnY7P6ztd8sYrWAJv',cat:'earning'},
+  {name:'Fiverr Complete Course',url:'https://drive.google.com/drive/folders/1uuVL8NNzvRSRLPlDlYAcLDKb75kqm4a6',cat:'earning'},
+  {name:'Upwork Success Blueprint',url:'https://drive.google.com/drive/folders/1XUTsITdwDmtNwV2vnYxsZxQjuUkXq0Wm',cat:'earning'},
+  {name:'Daraz Mastery Hamza Ali',url:'https://drive.google.com/drive/folders/1bIGaHyZpXbKBnkdqSvzeW6kqwIfkOEh0',cat:'earning'},
+  {name:'TikTok Monetization Latest',url:'https://drive.google.com/drive/folders/1KJu9LmHe_iYhpK0sKogshKWbWSzM8jws',cat:'earning'},
+  {name:'Adsense Arbitrage Method',url:'https://drive.google.com/drive/folders/1_MpaKoYJTXrKZtFXFmKRYlK1mBuuDn-1',cat:'earning'},
+  {name:'CPA Marketing Secrets',url:'https://drive.google.com/drive/folders/14tQqmQToO-qLEZimMq_Z9APD9yHDndoY',cat:'earning'},
+  {name:'Trading SMC Master Course',url:'https://drive.google.com/drive/folders/1tYP5V63QUC5x6DyiaxT9J4AzAOV2w4eJ',cat:'earning'},
+  {name:'Forex Strategy Pumping Station',url:'https://drive.google.com/drive/folders/1cFUBJhHMPsKNepSXtWeCvw6w116THOsS',cat:'earning'},
+  {name:'Social Media Monetization (Talia Datt)',url:'https://drive.google.com/drive/folders/1-_4rKI2FHm0MC4Ux3uvz3ri0zGrKLkbx',cat:'earning'},
+  {name:'Personal Brand Monetization',url:'https://drive.google.com/drive/folders/1XjzfryS8u9h2pzFeUVMXsfirOJ4lZTFx',cat:'earning'},
+  {name:'Advanced Sales Negotiation (Grant Cardone)',url:'https://drive.google.com/drive/folders/1OjkRQ_MEJuxike9En_tG5yny10SivDtP',cat:'earning'},
+  {name:'Client Hunting (Waheed Zen)',url:'https://drive.google.com/drive/folders/1Y7CtE3jObTIcsGys3ZHhEC54sCEDa63t',cat:'earning'},
+  {name:'Crypto Trading (P4 Provider)',url:'https://drive.google.com/drive/folders/1ZT6w7lqD7RP_Og7rDtQqmrXhbhWDUXsy',cat:'earning'},
+  {name:'Mutual Funds Basics to Advance',url:'https://drive.google.com/drive/folders/12u40a4nuz9mRJpM86OBJQevTO2Q-7-Wr',cat:'earning'},
+  {name:'Forex Trading Full Course',url:'https://drive.google.com/drive/folders/1pRVa3G8F48PUfy7l4H_9AuWitXWDghRr',cat:'earning'},
+  {name:'Financial Markets Technical Analysis',url:'https://drive.google.com/drive/folders/1gZV6YtnlZESrXN9JyUFtQmXTyVonofjV',cat:'earning'},
+  {name:'Adobe Premiere Pro Novice to Expert',url:'https://drive.google.com/drive/folders/1zenVlbHAFl28caDhdiGdMn4WUciL_3uw',cat:'editing'},
+  {name:'CapCut Mobile Mastery 2025',url:'https://drive.google.com/drive/folders/1XwQdcXhdI0SA0rHtttL0fD06EkJkDdFz',cat:'editing'},
+  {name:'Aesthetic Editing by Mooro',url:'https://drive.google.com/drive/folders/1G3W17qCoGu7DxZLE8ZZHCDAjxdy8Bb9v',cat:'editing'},
+  {name:'Tharun Speaks Editing (Updated)',url:'https://drive.google.com/drive/folders/1F18fakiCHAHRzlBRqr5hpYzlwcrhwpqh',cat:'editing'},
+  {name:'Inshot Pro Mod APK',url:'https://www.mediafire.com/file/h2q6911356mg3hu/Inshot_Pro.apk/file',cat:'editing'},
+  {name:'E-commerce Photography iPhone',url:'https://drive.google.com/drive/folders/1KusW0Zo_rzK_5yBhUMNbYVGJ_xyqdSQz',cat:'editing'},
+  {name:'Fashion Flair Photography',url:'https://drive.google.com/drive/folders/15FiAEXy0Ix6s2q13oBF0tZ9qaJwZIYpC',cat:'editing'},
+  {name:'Product Photography (Coffee & Beverage)',url:'https://drive.google.com/drive/folders/15RiY1mZ3ztxiZFtDdflx-idHJ8WmxXbr',cat:'editing'},
+  {name:'Mobile Editing Magic (Tina Lee)',url:'https://drive.google.com/drive/folders/1UdzPpDhZ9ZiVD9Hgt5Trno7etzYGUZc6',cat:'editing'},
+  {name:'Photoshop Box Mockups Master',url:'https://drive.google.com/drive/folders/1VB6MLF7I0bB8mOE6_ibU5Gcf_M7eCPZT',cat:'design'},
+  {name:'Figma UI/UX Design Journey',url:'https://drive.google.com/drive/folders/1Un4XoWw_JJaReGtY4i1fbq1bXVgqcwne',cat:'design'},
+  {name:'Professional Logo Production AI',url:'https://drive.google.com/drive/folders/1K_5OyRBVshB0RMNLrtXLI97nkJnY3P-h',cat:'design'},
+  {name:'Digital Branding (Rajeev Mehta)',url:'https://drive.google.com/drive/folders/1T4TYIlNzXkZ521OvrOzqv_XC01c624jJ',cat:'design'},
+  {name:'3D Character Modeling (Domestika)',url:'https://drive.google.com/drive/folders/1K1BVzdj5px0WPA5ky5TnRV5njPcjmrLv',cat:'design'},
+  {name:'Pinterest Strategies 2025',url:'https://drive.google.com/drive/folders/1KR2S1yOE1zIg-asBj-DnxDjc11UuuWdI',cat:'marketing'},
+  {name:'LinkedIn for Beginners 2025',url:'https://drive.google.com/drive/folders/1ih_3fQv5_iXMOQg8cUl6Go6ww5Hf-K54',cat:'marketing'},
+  {name:'Facebook Ads Marketing (Saurav Jain)',url:'https://drive.google.com/drive/folders/1lUGWK6XOD5djLiJjSii2--EcByVGXTet',cat:'marketing'},
+  {name:'TikTok Video Ads Course',url:'https://vnshortener.com/OI1X',cat:'marketing'},
+  {name:'TikTok Viral Growth Method',url:'https://drive.google.com/drive/folders/1DZGbMOIsOikyE3FzR7iP5W3hWUAzZLm0s',cat:'marketing'},
+  {name:'Unfreeze YouTube Channel (2025 Trick)',url:'https://www.mediafire.com/file/eoutaey9wilbb9c/UNFREEZE_YT_BY_SIGMA_TECH.mp4/file',cat:'marketing'},
+  {name:'Facebook Ads Course (Paid Free)',url:'https://vnshortener.com/OnlLP',cat:'marketing'},
+  {name:'IELTS Writing Task 2 (Band 7+)',url:'https://drive.google.com/drive/folders/1HF0y-YZwJwPn38Kyefsk1H39rz1323V_',cat:'misc'},
+  {name:'Quran Primary Course Azan Guru',url:'https://drive.google.com/drive/folders/1XMyvtRGwsr7F226Apo8KUCarENvJoBTd',cat:'islamic'},
+  {name:'100TB Mega Master Database',url:'https://mega.nz/folder/3IAXCTiZ#LywIcbguvDy3T4x-TUfIOw',cat:'misc'},
+  {name:'2TB+ Private Premium Course Bundle',url:'https://drive.google.com/drive/folders/1SLaDF4PA8ub8D_noyUSaoxQilCc3tcV5',cat:'misc'},
+  {name:'400+ Elite Private Drive Courses',url:'https://drive.google.com/drive/folders/1n-xxNG6UnUOtreaSX6KuXj6x2A_2__vK',cat:'misc'},
+  {name:'WhatsApp 2026 Bypass Trick',url:'https://www.mediafire.com/file/bn9ulij23u1hg6i/',cat:'hacking'},
+  {name:'WiFi Hacking Masterclass (3 Parts)',url:'https://drive.google.com/file/d/1nvH320EDqW-6bA0DqxM_6DZiSYF67Voi/view',cat:'hacking'},
+  {name:'Gemini Verification Logic Bot',url:'https://t.me/gemini_idbot?',cat:'hacking'},
+  {name:'JackV2 No Enc (INVISIBLE)',url:'https://www.mediafire.com/file/x8adijdn2cdiqyx/JackV2+No+Enc+(INVISIBLE).zip/file',cat:'hacking'},
+  {name:'Spider v9 Crack',url:'https://www.mediafire.com/file/xauy9olt0omgt67/Spider+v9+Crack.7z/file',cat:'hacking'},
+  {name:'KOXAC GANAS VIP BY LYZ',url:'https://www.mediafire.com/file/xylrb4p9yk6u0ru/KOXAC_GANAS_VIP_BY_LYZ.zip/file',cat:'hacking'},
+  {name:'FOXX BOT 2.3',url:'https://www.mediafire.com/file/fitrbwhdqauj9hz/FOXX+BOT+2.3.zip/file',cat:'hacking'},
+  {name:'VULCANIC Bot',url:'https://www.mediafire.com/file/b7tcnhldozcw9l5/VULCANIC.zip/file',cat:'hacking'},
+  {name:'SizukuV8 (nico)',url:'https://www.mediafire.com/file/8lmrhwbfdw747e5/SizukuV8+(nico).zip/file',cat:'hacking'},
+  {name:'VOID++ GetsuZo by RAPIP',url:'https://www.mediafire.com/file/h6thl49is6psqfo/VOID++GetsuZo+by+RAPIP+.zip/file',cat:'hacking'},
+  {name:'X-CLARA CRASH',url:'https://www.mediafire.com/file/gkc1c9c6h4w0ztp/X-CLARA_CRASH.zip/file',cat:'hacking'},
+  {name:'X-DENJI V1',url:'https://www.mediafire.com/file/coixyo6bcen5z0c/X-DENJI%25F0%259F%2592%25A8%25F0%259F%2594%25A5_V1.zip/file',cat:'hacking'},
+  {name:'DYNZXCRASH V5',url:'https://www.mediafire.com/file/mawcu1qa5ndiipj/DYNZXCRASH_V5.zip/file',cat:'hacking'},
+  {name:'RxhL V11 VIP',url:'https://www.mediafire.com/file/2je4i9fob2pnixi/RxhL+V11+VIP.zip/file',cat:'hacking'},
+  {name:'TechGod9 Bot',url:'https://www.mediafire.com/file/rwspkh74teqylqk/techgod9.zip/file',cat:'hacking'},
+  {name:'Yanbugterbaru',url:'https://www.mediafire.com/file/lxwn6vzbvzscd0r/Yanbugterbaru.zip/file',cat:'hacking'},
+  {name:'SUPER ULTRA by ALWAYSXDAMR66',url:'https://www.mediafire.com/file/c6o2mxhsd9l1ilc/SUPER_ULTRA_BY_ALWAYSXDAMR66.zip/file',cat:'hacking'},
+  {name:'Q V17 PRO',url:'https://www.mediafire.com/file/3wm45gytcyst1sy/Q+%F0%9D%90%95%F0%9D%9F%8F%F0%9D%9F%90+%F0%9D%90%8F%F0%9D%90%91%F0%9D%90%8E+(1).zip/file',cat:'hacking'},
+  {name:'SKAMED V2.3',url:'https://www.mediafire.com/file/wxu7dn37rq4dcko/%25F0%259D%2590%2592%25F0%259D%2590%258B%25F0%259D%2590%2580%25F0%259D%2590%2598%25F0%259D%2590%2584%25F0%259D%2590%2591_%25F0%259D%2590%2595%25F0%259D%259F%2592.%25F0%259D%259F%2593%25281%2529.zip/file',cat:'hacking'},
+  {name:'3BLUEXDEMON V3',url:'https://www.mediafire.com/file/avgeonkxbrljmeb/3%F0%9D%90%81%F0%9D%90%8B%F0%9D%90%94%F0%9D%90%84%F0%9D%90%97%F0%9D%90%83%F0%9D%90%84%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%8D-%F0%9D%90%95%F0%9D%9F%91.zip/file',cat:'hacking'},
+  {name:'Hack Mobile By One Link',url:'https://drive.google.com/file/d/18Bo10ZadGJpZjQPQJz1Y5CtTHBJZCMiS/view?usp=drivesdk',cat:'hacking'},
+  {name:'FB Single Name Profile Method',url:'https://drive.google.com/drive/folders/1IBqHveQR2x5UUzKrq09ctqYewDNYQ2YS',cat:'hacking'},
+  {name:'FB Black Tick Trick (JavaScript)',url:'https://www.mediafire.com/file/a9auarb67dhshy3/jadoon%252C_Black_Tick.txt/file',cat:'hacking'},
+  {name:'Unblock Yourself From Anyone',url:'https://drive.google.com/drive/folders/1Gtoe8-jh0t8zAJj8da86Ye9ldXCQswQt',cat:'hacking'},
+  {name:'GB WhatsApp WP Extreme Plus V22.15',url:'https://www.mediafire.com/file/z0d4vr0qmdx8oa0/',cat:'hacking'},
+  {name:'TikTok Live APK',url:'https://www.mediafire.com/file/np7xp5d0nrnpf19/base.apk/file',cat:'hacking'},
+  {name:'Gmail Hack Tool (Termux/Linux)',url:'https://github.com/mishakorzik/Gmail-Hack',cat:'hacking'},
+  {name:'Kali Linux on Termux (kali-havk)',url:'https://github.com/GH05T-HUNTER5/kali-havk',cat:'hacking'},
+  {name:'Complete Ethical Hacking Course 9GB',url:'https://mega.nz/folder/WvIlFCLQ#KHWbWS4Ez57R3jCdpYdREw',cat:'hacking'},
+  {name:'Camera Hacking Telegram Bot',url:'https://replit.com/github/suman333mondal/CameraHackingBot',cat:'hacking'},
+  {name:'PUBG/BGMI Hack Making Course',url:'https://www.mediafire.com/file/y78pzecdr5bmj7y/Pubg_Hack_Making_Course.rar/file',cat:'hacking'},
+  {name:'Android Hacking APKs Collection',url:'https://mega.nz/folder/mERTGIgT#wDELxCy096qCIDA-xx5h1g',cat:'hacking'},
+  {name:'Blackhat Hacking Course (Android/PC/Carding)',url:'https://mega.nz/folder/4hkWxYzJ#46BhONa5ulbxJEWHp-9vpg',cat:'hacking'},
+  {name:'WiFi Hacking Course Bundle (Paid Leaked)',url:'https://mega.nz/folder/ypgg3QJS#GmKAHx44BgENWi-ZBKNnOA',cat:'hacking'},
+  {name:'WhatsApp Channel Ban Method (New Working)',url:'https://www.mediafire.com/file/i6iyt3yue1l7vve/WHATSAPP_CHANNEL_BAN_METHOD_NEW_WORKING_%25F0%259F%2592%25AF_METHOD_BY_PROxARMY_TEAM.zip/file',cat:'hacking'},
+  {name:'TikTok 100 Likes Daily',url:'https://www.mediafire.com/file/rvirmsr0qak96o2/tiktok_100likes_daily.zip/file',cat:'hacking'},
+  {name:'Super VPN Patched Premium Cracked',url:'https://www.mediafire.com/file/ng58l6rvthowf8d/SuperVPN_PATCHED_BY_ABHEEBHAI.apk/file',cat:'hacking'},
+  {name:'Email Bomber Fast (by Ajay)',url:'https://anonfiles.com/5b6aQ9F5oa/emailbomber_FAST_BY_AJAY_rar',cat:'hacking'},
+  {name:'All In One Paid Carding Course',url:'https://drive.google.com/drive/folders/1hJWpwgh_GbjZcSxlnJ12NB8XKHevv69T',cat:'hacking'},
+  {name:'Strike Method (Docs)',url:'https://docs.google.com/document/d/1Y3PBRok7I80VRXPAnUenVYxZaNBeZ5wkM7CzhAEgmCo/edit?usp=drivesdk',cat:'hacking'},
+  {name:'Remember Method (Docs)',url:'https://docs.google.com/document/d/1hUZbRv3Zqo67KcWXZDT455WVfY5k4XU5kTdXMviSw4g/edit?usp=drivesdk',cat:'hacking'},
+  {name:'Artificial Ban Method (Docs)',url:'https://docs.google.com/document/d/17bbQalZ5CQJt_dR0qb5tJaMRHJ38L5YCr3EruFf17LA/edit?usp=drivesdk',cat:'hacking'},
+  {name:'Lock Method (Docs)',url:'https://docs.google.com/document/d/1vXTCbZIujsGRFidchdi0QJTp-kXzkWd07DTVSM_VsMY/edit?usp=drivesdk',cat:'hacking'},
+  {name:'Imper Method (Docs)',url:'https://docs.google.com/document/d/1sQQDYxZbAj842zcAVKVTt6P4vRBderdG0JtADWfl5ys/edit?usp=drivesdk',cat:'hacking'},
+  {name:'Unban Method (Docs)',url:'https://docs.google.com/document/d/1Oo61iozghDKtPGRYaPYCUDF4VduKSDIUUaTR1ZiH36M/edit?usp=drivesdk',cat:'hacking'},
+  {name:'Ban Method (Docs)',url:'https://docs.google.com/document/d/1irBk9VrNzDW2xDdmt1wwmIMsUGhXTCavFsfl_CtDgKk/edit?usp=drivesdk',cat:'hacking'},
+  {name:'Unlimited Snapchat Score Method',url:'https://www.mediafire.com/file/vuhpqhbnipsby1m/Snapchat_Score_Increase_Method_By_ProxArmy.zip/file',cat:'hacking'},
+  {name:'WiFi Hacker APK (Android)',url:'https://www.mediafire.com/file/g1vr6955y2ve4g6/WiFi-Hacker_%25284%2529.apk/file',cat:'hacking'},
+  {name:'Bug Bot XEON V18 (ProxArmy Leak)',url:'https://www.mediafire.com/file/f9u64rjkbf5bfg4/XEON-V18-LEAK-BY-PROXARMY.zip/file',cat:'hacking'},
+  {name:'CamPhish — CCTV & Phone Camera Hack',url:'https://github.com/techchipnet/CamPhish',cat:'hacking'},
+  {name:'59 Sites — Unlimited Instagram Followers',url:'https://exz.pages.dev/',cat:'hacking'},
+  {name:'Instagram Ban Form (UK VPN Method)',url:'https://help.instagram.com/contact/653100351788502',cat:'hacking'},
+  {name:'Instagram Unban Appeal Form',url:'https://help.instagram.com/contact/1652567838289083',cat:'hacking'},
+  {name:'WhatsApp Grievance Ban Method Form',url:'https://www.whatsapp.com/contact/forms/1534459096974129/',cat:'hacking'},
+  {name:'WhatsApp Permanent Unban Method (Video)',url:'https://www.mediafire.com/file/nggpcvixtzx3mwo/this-account-can-no-longer-use-whatsapp-problem-2025-whatsapp-banned-my-number-solution-2025-480-ytshorts.savetube.me.mp4/file',cat:'hacking'},
+  {name:'TikTok Live Without 1K Followers',url:'https://www.mediafire.com/file/aph3q67s4zombht/TIKTOK_LIVE_TRICK_BY_SIGMA_TECH.7z/file',cat:'hacking'},
+  {name:'Trust Wallet Unlimited Money & Account Hack',url:'https://www.mediafire.com/file/iondgjxswk9ac3t/%25F0%259F%258E%2583Trust_Wallet_Unlimited_Money_And_Unlimited_Account_Hack_.zip/file',cat:'hacking'},
+  {name:'Exploit Android Stagefright (Hack via Video)',url:'https://github.com/fireworm0/Exploit-Android-Stagefright',cat:'hacking'},
+  {name:'AhmiiVirus — Device Destroy Tool',url:'https://github.com/sadamshr3be/AhmiiVirus-alsharabi',cat:'hacking'},
+  {name:'Instagram Remembering/Memorial Method',url:'https://help.instagram.com/contact/1474899482730688',cat:'hacking'},
+  {name:'Free Fire Account Phishing Hack',url:'https://github.com/OnlineHacKing/FreeFire-Phishing',cat:'hacking'},
+  {name:'Instagram Mega Hack Pack (21 Methods)',url:'https://indianshortner.in/4Dv7Ko',cat:'hacking'},
+  {name:'Globfone — Call/SMS Without Phone Number',url:'https://globfone.com/',cat:'hacking'},
+  {name:'Email Password Leak Checker (HaveIBeenPwned)',url:'https://haveibeenpwned.com/',cat:'hacking'},
+  {name:'Email Password Leak Check Method Video',url:'https://www.mediafire.com/folder/mj3voxpdmdhcl/',cat:'hacking'},
+  {name:'Unlimited Canva Panels Method (PDF Guide)',url:'https://drive.google.com/file/d/10joczzwagS7BiZ-09RvwJv9NA_59IEgq',cat:'hacking'},
+  {name:'+92 Pakistan Number Trick (No OTP/VPN)',url:'https://www.mediafire.com/file/asa4rwl5e57rt9u/PAK+NUMBER+TRICK+BY+SIGMA+TECH.7z/file',cat:'hacking'},
+  {name:'Free SMS Virtual Numbers (sms.stats.tel)',url:'https://sms.stats.tel/',cat:'hacking'},
+  {name:'8 Ball Pool Hack Mod APK (Premium Unlocked)',url:'https://drive.google.com/drive/folders/1nd9jqTgKzvXSh1kRMI78lh32PipmC7nM',cat:'misc'},
+  {name:'Hadoop Fundamentals',url:'https://drive.google.com/drive/folders/1xICarprcfM4CkFR-veb23lCd6rnhV0Xs',cat:'dev'},
+  {name:'Advanced React and Redux',url:'https://drive.google.com/folderview?id=1Tk_-NOXDJ2xuKefQ-r0TiwSvYz0ejKgd',cat:'dev'},
+  {name:'Web Developer Nanodegree',url:'https://drive.google.com/folderview?id=1-HJRjs2jM-dS9toH46dic4h7Gwnlk_hS',cat:'dev'},
+  {name:'Build Responsive Websites with HTML5 & CSS3',url:'https://drive.google.com/folderview?id=1WJ-oGlQJFt4PTg2BE1ZKTvronD8HOONb',cat:'dev'},
+  {name:'The Complete ASP.NET MVC 5 Course',url:'https://drive.google.com/folderview?id=1izOIk6Xzdnkxi9C-qtUOmB2kgLULfsP5',cat:'dev'},
+  {name:'The Python Mega Course: 10 Real World Apps',url:'https://drive.google.com/folderview?id=1n2VVih2IcFdGJ6smCB5nJ5hYu42lT5kn',cat:'dev'},
+  {name:'Linux Foundation Certified Engineer 2019',url:'https://drive.google.com/folderview?id=1qyliHCTOiqEa38IaD226mdD0LHLABlAC',cat:'dev'},
+  {name:'AZ-103/AZ-104 Azure Administrator 2020',url:'https://drive.google.com/folderview?id=1j3itB8pRO7ckY-YciIYE_7zhV50mwcq1',cat:'dev'},
+  {name:'CSS Complete Guide 2020 (Flexbox, Grid, Sass)',url:'https://drive.google.com/folderview?id=1zTjlqkSyXqmFHdTr2rGAAnx3_XCt3qIw',cat:'dev'},
+  {name:'AWS Certified Solutions Architect Associate 2020',url:'https://drive.google.com/folderview?id=14eS7Bpil9ZQWo44NYDNWWGJ9Fam9up6B',cat:'dev'},
+  {name:'Web Designing Course: HTML5, CSS3, Bootstrap',url:'https://drive.google.com/drive/folders/1xHoZqYlT_Mx8DGASlqI94rOAJ0pHSqfA',cat:'dev'},
+  {name:'Number Series Generator App',url:'https://www.mediafire.com/file/t3u2thi50h4dnu7/Numbers_Series_Generator_App_By_Learnwithzaid/file',cat:'dev'},
+  {name:'Machine Learning for Apps',url:'https://drive.google.com/folderview?id=12rfOJrpUj9vt9HYg66djxYDads4HmGDB',cat:'ai'},
+  {name:'Computer Vision Nanodegree',url:'https://drive.google.com/folderview?id=1770Z6Rw8tSq2iXjS2X_MoJwUd6EuZxCq',cat:'ai'},
+  {name:'Complete ML & Data Science Zero to Mastery',url:'https://drive.google.com/folderview?id=1bFcmRP5EAtksPtjiuV9qpHyNK6sci8WM',cat:'ai'},
+  {name:'Deep Learning With TensorFlow',url:'https://drive.google.com/folderview?id=1_az7Ue500bdT-R25qGrhitqhaxNILcxG',cat:'ai'},
+  {name:'Deep Reinforcement Learning Nanodegree',url:'https://drive.google.com/folderview?id=1joMAOhnqM6pTu4xyS01MEpZUUT1g4llq',cat:'ai'},
+  {name:'Deep Learning Nanodegree Program',url:'https://drive.google.com/folderview?id=1muTggFfCeT41P6dSALVUoPYMAFW639cB',cat:'ai'},
+  {name:'Natural Language Processing Nanodegree',url:'https://drive.google.com/folderview?id=1cg-msrtVjaxqoMg_LkjJunh999o9lv9U',cat:'ai'},
+  {name:'Google Data Studio A-Z: Data Visualization',url:'https://drive.google.com/folderview?id=11vvsLQCiXgg2BlA3mHIJw7sNS_MS-S3_',cat:'ai'},
+  {name:'Google Veo 3 Unlimited Credits Method',url:'https://drive.google.com/file/d/1WhzZv0MXn-I-AWwx_Ixx7hSOn6I7uyNb/view?usp=drivesdk',cat:'ai'},
+  {name:'WiFi Hacking Course',url:'https://drive.google.com/folderview?id=1tgkKt4lSpXD3GnMQRgUb4bbtlmpP9XOE',cat:'hacking'},
+  {name:'Cybersecurity Collection',url:'https://drive.google.com/drive/folders/1q2sOBNU4lPBkwtF1Msl6uCACBV5TUGWD',cat:'hacking'},
+  {name:'Pentester Academy: x86 Assembly & Shellcoding',url:'https://drive.google.com/folderview?id=1KKKlL5TzdXDIxrSOz0Gmz3RWGTh_0Xli',cat:'hacking'},
+  {name:'Kali Linux Complete Training From Scratch',url:'https://drive.google.com/folderview?id=1714TBeP8chDWSIPCcALAuEM5ZNQsLYsn',cat:'hacking'},
+  {name:'Python Ethical Hacking: Build Hacking Tools',url:'https://drive.google.com/drive/folders/1aBX4Y0cqQSZJZoPiweGEkvyJ05r3SdJY',cat:'hacking'},
+  {name:'Bug Bounty Hunting Advanced Earning Method',url:'https://drive.google.com/drive/folders/1ytZk4T1EnPPwmtt9FJX0BjNPnafzPWwr',cat:'hacking'},
+  {name:'Learn Python & Ethical Hacking From Scratch',url:'https://drive.google.com/uc?id=1wZ8bW3acJa9CHS9672-Ydo04X3yLrsUt&export=download',cat:'hacking'},
+  {name:'Learn Ethical Hacking From Scratch',url:'https://drive.google.com/folderview?id=1Ns62tznu2mj7Q0QktrWGCcNsrL5CigtN',cat:'hacking'},
+  {name:'Website Hacking & Bug Bounty Course 2018',url:'https://drive.google.com/drive/folders/1fePVylnQPWj_84-nx9PThfcpwJTtv-9C',cat:'hacking'},
+  {name:'Ethical Hacking with Python, JS & Kali Linux',url:'https://drive.google.com/folderview?id=1wniooIDbtt7yI9tx1sCjVdKn3ftZNas2',cat:'hacking'},
+  {name:'Unlimited Gmails Method (Video)',url:'https://www.mediafire.com/file/odm2i2z5vk9suo6/VID_20250626_123737_679.mp4/file',cat:'hacking'},
+  {name:'Create Unlimited UK & USA TikTok Accounts',url:'https://drive.google.com/file/d/1pMPAIfumqcR6LKojyss-SxqWg5vRNGvO/view?usp=drivesdk',cat:'hacking'},
+  {name:'Business Sender V.26 Cracked',url:'https://mega.nz/file/PHo2GS5R#OUCXUfKn7-CmZiokI4SWLQ0cTiwnT0FbgY1NGS2uXFY',cat:'hacking'},
+  {name:'Antivirus & Malware FUD Course',url:'https://mega.nz/folder/gldnWITB#_J3wIOwUYVriPX6sRfDpbA',cat:'hacking'},
+  {name:'Auto Email Sender',url:'https://mega.nz/file/OnwjGYbK#ieV5tZuQ8XeZZm9SMIOwk9LULsmcc7uNAC_QfWLaUeE',cat:'hacking'},
+  {name:'Create Unlimited USA Gmails (No Number)',url:'https://drive.google.com/drive/folders/13fZNd3W2P3RgS0qArzL4OHpfzNbKoxQ9',cat:'hacking'},
+  {name:'Python for Finance & Data Analytics',url:'https://drive.google.com/folderview?id=1T4FMqAmZ1KfK_f8TsdZdHREEG8Z6U8Nl',cat:'earning'},
+  {name:'Free YouTube Growth Course',url:'https://drive.google.com/drive/folders/14EJWyJ_iJ6mRQvpzrp-q82QelYJa3y7t',cat:'earning'},
+  {name:'Photoshop CC: Easy & Professional Way',url:'https://drive.google.com/folderview?id=1fTWvTMI318u22eVddaaZ3flZ6IRUB44d',cat:'design'},
+  {name:'Thumbnail Pack (YouTube)',url:'https://drive.google.com/drive/folders/13Lf7u40YuOT2pLzkmGaJes5mNht7ks7X',cat:'design'},
+  {name:'3K+ Pixellab Font Pack (Stylish Fonts)',url:'https://www.mediafire.com/file/gna1ub9930w24mu/2999%252B_Font_Pixellab.7z/file',cat:'design'},
+  {name:'Millionaire DJ: FL Studio 12 Pro Music Production',url:'https://drive.google.com/folderview?id=1soqPKlzEak7BvAK0LTwMm-PdvbhQ6pX5',cat:'editing'},
+  {name:'Voice Cloning & AI Deepfakes',url:'https://drive.google.com/drive/folders/1QgmPHj2aEkpWVnRFfL0MnM3LI5ZZlNub',cat:'ai'},
+  {name:'Mind Reader AI Engine Course',url:'https://drive.google.com/drive/folders/1hs78ve5-fwpfxYHGxpctz1aI4_5QfoTm',cat:'ai'},
+  {name:'Ole Lehman AI Master Course',url:'https://drive.google.com/drive/folders/1rT-JTmNqinvcZieO-Akt58hX87gAllOw',cat:'ai'},
+  {name:'Shahid Anwar Amazon FBA Mega',url:'https://mega.nz/folder/hO00BTxb#ZaPbH7PF6QpxmBTLPRtPpg',cat:'earning'},
+  {name:'Faiz SMC Trading Architecture',url:'https://drive.google.com/drive/folders/156o0gbL1CXD4gRFpXOh0BUL4r_dxyOD8',cat:'earning'},
+  {name:'Adi Singh Editing Secrets 2026',url:'https://drive.google.com/drive/folders/1VjHnyj4Eg5PjCgZtH3g5BtcbfHxNENZ3',cat:'editing'},
+  {name:'Blender Bros 3D Visualization',url:'https://drive.google.com/drive/folders/1GzE5xxhD9_KPpA-l-b7eaAHhYKIEWynF',cat:'editing'},
+  {name:'WordPress Course',url:'https://drive.google.com/drive/folders/1XcEgh9oBsbED1PpagBeQawNpjxeLBqMI',cat:'dev'},
+  {name:'Ecommerce Website in WordPress',url:'https://drive.google.com/drive/folders/1Ncyk9OyXa-VdXbZpnQatkOvrVoL9RmrM',cat:'dev'},
+  {name:'Bootstrap Course',url:'https://drive.google.com/drive/folders/1YrJkWGIqzN8xwCJ7hYlXExMZ0iTnt-Pv',cat:'dev'},
+  {name:'WordPress Theme Development',url:'https://drive.google.com/drive/folders/16mu5RWsq_DgA6SXsETMLToGMgsbyF5An',cat:'dev'},
+  {name:'Web Application Development Course',url:'https://drive.google.com/drive/folders/1PYtU_RHM1yl20MR78zX2C_I7hikRhSZM',cat:'dev'},
+  {name:'Software Development Course',url:'https://drive.google.com/drive/folders/1YxRaiFh-s5rXkAeZ9tQcnDCrDjQ9kNuM',cat:'dev'},
+  {name:'Landing Page Course',url:'https://drive.google.com/drive/folders/1lHH4wyviTbgkVq_Y3oCEg4ew4LEHo83_',cat:'dev'},
+  {name:'iOS App Development Course',url:'https://drive.google.com/drive/folders/1e99aacIzFs7Fkn0Jts0Z3Md_KrOK7yTC',cat:'dev'},
+  {name:'Game Development Course',url:'https://drive.google.com/drive/folders/1JfHfF_WV4Rhcpp1fIacEromMVLi89o3E',cat:'dev'},
+  {name:'Python Framework Course',url:'https://drive.google.com/drive/folders/181ALFRFs5B654wBQQQ6GbGTp3lwOJaR0',cat:'dev'},
+  {name:'Basics of Programming Course',url:'https://drive.google.com/drive/folders/18NDdX9wJ-xUA3bNYORgDsT2XPwSNE5VF',cat:'dev'},
+  {name:'Udemy: Gmail Productivity (Free)',url:'https://www.udemy.com/course/complete-gmail-productivity-course-more-productive-email/?couponCode=59F07BFFA617E811C265',cat:'dev'},
+  {name:'Udemy: Microsoft Excel Beginner to Expert (Free)',url:'https://www.udemy.com/course/excel-microsoft-excel-course-beginner-to-expert-2022/?couponCode=SUBHANALLAH_123125',cat:'dev'},
+  {name:'Udemy: Python Fast Entry (Free)',url:'https://www.udemy.com/course/python-fast-entry-programming-for-everyone/?couponCode=31DECEMBER2025',cat:'dev'},
+  {name:'Udemy: Master Microsoft Teams (Free)',url:'https://www.udemy.com/course/the-complete-microsoft-teams-course-master-microsoft-teams/?couponCode=F85A1FB255CD9761439E',cat:'dev'},
+  {name:'Udemy: C Training Crash Course (Free)',url:'https://www.udemy.com/course/c-training-crash-course-2022/?couponCode=58DDA6033BEA25D5837E',cat:'dev'},
+  {name:'Udemy: CSS & JavaScript Crash Course (Free)',url:'https://www.udemy.com/course/css-and-javascript-crash-course/?couponCode=34D00CEF167833251669',cat:'dev'},
+  {name:'Udemy: Python Mastery 100 Days 100 Projects (Free)',url:'https://www.udemy.com/course/python-mastery-100-days-100-projects/?couponCode=JAN-FREE-01',cat:'dev'},
+  {name:'Calculator Lock App (No Coding Tutorial)',url:'https://youtu.be/Q0e7TQRV4P4?si=9RMDsZzKiQDm1PYg',cat:'dev'},
+  {name:'Night-Howler Source Codes ZIP',url:'https://www.mediafire.com/file/r36pjmko58y2ia1/HOWLER+TOOLS+SOURCE+CODES.zip/file',cat:'dev'},
+  {name:'ProxyHub VIP — 1000+ Premium Proxies',url:'https://proxyhub.lovable.app/pricing',cat:'dev'},
+  {name:'Udemy: LLM Engineer Course (Free)',url:'https://www.udemy.com/course/llm-engineer/?couponCode=JAN-FREE-01',cat:'ai'},
+  {name:'Udemy: AI + Quantum Computing (Free)',url:'https://www.udemy.com/course/ai-quantum-computing-mastery-from-zero-to-expert-bootcamp/?couponCode=JAN-FREE-01',cat:'ai'},
+  {name:'Udemy: DeepSeek R1 Real World Projects (Free)',url:'https://www.udemy.com/course/deepseek-r1-real-world-projects/?couponCode=JAN-FREE-01',cat:'ai'},
+  {name:'Udemy: AI Agents Bootcamp (Free)',url:'https://www.udemy.com/course/ai-agents-for-everyone-and-artificial-intelligence-bootcamp/?couponCode=JAN-FREE-01',cat:'ai'},
+  {name:'Udemy: AI Engineering Masterclass (Free)',url:'https://www.udemy.com/course/ai-engineering-masterclass-from-zero-to-ai-hero/?couponCode=JAN-FREE-01',cat:'ai'},
+  {name:'Islamic Story Videos with AI (2026)',url:'https://sub4unlock.com/SL/1783421',cat:'ai'},
+  {name:'Google Ads Course',url:'https://drive.google.com/drive/folders/1RbPVp5snll23XgknMS2ZSFnELIHn_Ykp',cat:'marketing'},
+  {name:'SEO Course',url:'https://drive.google.com/drive/folders/1FMzdZMbVUZbsZMnedbzClt5OxW0R3zOW',cat:'marketing'},
+  {name:'Super Affiliate Marketing Secrets (Umer Qureshi)',url:'https://drive.google.com/drive/folders/14tQqmQToO-qLEZimMq_Z9APD9yHDndoY?usp=drive_link',cat:'marketing'},
+  {name:'YouTube Marketing + Filmora Complete Course',url:'https://drive.google.com/drive/folders/1DO7hMpEG4kE-K7z_8XcfkPd76l1OrYTt',cat:'marketing'},
+  {name:'Udemy: SMM Professional Certification (Free)',url:'https://www.udemy.com/course/smm_management/?couponCode=5BE0DE41E994BA144796',cat:'marketing'},
+  {name:'YouTube Watch Time Generator',url:'https://www.mediafire.com/file/ytwzd2kk0efzzat/YouTube_4k_Watchtime_Methid_By_AbheeBhai_Mods.zip/file',cat:'marketing'},
+  {name:'YouTube Copyright Bypass (with Software)',url:'https://www.mediafire.com/file/vchzv7j96o4e8li/YouTube_Video_Bypass_Method_With_Software.rar/file',cat:'marketing'},
+  {name:'Facebook Ads Bundle Course',url:'https://drive.google.com/drive/folders/1akEl21vBGNveBx40G4aa4zm5wagF7AFa',cat:'marketing'},
+  {name:'VSA Trading 95% WinRate Course (Batch 38)',url:'https://drive.google.com/drive/folders/154t5SXu8hXs9ytlmMF8FPzviMqtCq_Wj?usp=sharing',cat:'earning'},
+  {name:'Free Virtual Credit Cards Tutorial',url:'https://youtu.be/dFgam7S98qs',cat:'earning'},
+  {name:'Highlighted 17 Courses Bundle (All Domains)',url:'https://drive.google.com/drive/folders/1ezDZ3uDplBOjbuBGw1qxzzD64tiXhtDt?usp=sharing',cat:'earning'},
+  {name:'300+ Most Demanding Courses Bundle',url:'https://docs.google.com/document/d/1WQoGo8UdQRIuCuX-YtUI5Kt9ldwl4wU2rRkOyEaF4w4/edit?usp=sharing',cat:'earning'},
+  {name:'Logo Designing Course',url:'https://drive.google.com/drive/folders/1zHrYSEjtry0kHw-X2ETzQUr83ZgSbtCf',cat:'design'},
+  {name:'Photoshop Complete Course (Drive)',url:'https://drive.google.com/drive/folders/18m82NNRlX-NuYwjBF0u7n5ZVAa4C0eA',cat:'design'},
+  {name:'WhatsApp Full DP No Crop Pack',url:'https://drive.google.com/drive/folders/1-d7GrCDddF4UrsEuV1HbJYNHIM3p3-5j',cat:'design'},
+  {name:'CapCut Latest APK v20.5.7',url:'https://www.mediafire.com/file/pab4m370tts4ebt/CapCut_Qureshi_20.5.7.apk/file',cat:'editing'},
+  {name:'CapCut Golden 2026 (No Watermark)',url:'https://www.mediafire.com/file/ayrs6y5o2rmrs72/CAPCUT_GOLDEN_2026.apk/file',cat:'editing'},
+  {name:'WhatsApp Hack 2026 New Full Working',url:'https://www.mediafire.com/file/bn9ulij23u1hg6i/WHATSAPP+HACK+2026+NEW+FULL+WORKING+TRICK/file',cat:'hacking'},
+  {name:'TikTok UK & USA Account Method (GHOSTY)',url:'https://www.mediafire.com/file/6om40alespxdxzi/TIKTOK_UK_USA_ACCOUNT_BY_GHOSTY_2026-01-04_09-36-53.txt/file',cat:'hacking'},
+  {name:'Carding on Mobile (Complete Method+Video)',url:'https://drive.google.com/file/d/1wZzR1Kzi9-xMqGxJmhfFXtxi80eM4vg_/view?usp=drivesdk',cat:'hacking'},
+  {name:'Fake Number Generator 2026 Method',url:'https://www.mediafire.com/file/e3m7cwq47lor87t/2026-FAKE-NUMBER-MATHAD/file',cat:'hacking'},
+  {name:'Credit Card Generator APK',url:'https://www.mediafire.com/file/xe67xy9qgqulpvv/CREDIT+CARD+GENERATOR_1.0.0.apk/file',cat:'hacking'},
+  {name:'Fake Text Message Creator APK',url:'https://www.mediafire.com/file/ujak3pdww6srze4/Fake+Text+Message_5.2.apk/file',cat:'hacking'},
+  {name:'Cybersecurity & Ethical Hacking Course (Full)',url:'https://drive.google.com/drive/mobile/folders/1if6MCeBCj8sxWwJIKhtgwU0GBuBW8uLx',cat:'hacking'},
+  {name:'Social Media Hack Video Tutorial',url:'https://www.mediafire.com/file/uobbe9ha2h0k04u/Social_Media_H%2523ck.mp4/file',cat:'hacking'},
+  {name:'FB ID Ban Method (AbheeBhai)',url:'https://www.mediafire.com/file/xsy20pc3ynwamqv/Facebook_Ban_Meth_By_AbheeBhai.zip/file',cat:'hacking'},
+  {name:'Mobile Lock Virus APK',url:'https://www.mediafire.com/file/oiinsrbswsria5d/Mobile_lock_virus.apk/file',cat:'hacking'},
+  {name:'JazzCash Biometric Bypass Mod APK',url:'https://www.mediafire.com/file/7xowdrkrdpu6us3/JazzCash_9.0.99.apk/file',cat:'hacking'},
+  {name:'EasyPaisa Biometric Bypass Mod',url:'https://www.mediafire.com/file/g7imx2y5j0ck3s1/easypaisa-2-9-66.xapk_%25281%2529.zip/file',cat:'hacking'},
+  {name:'Mobile Resetor APK (Android Reset)',url:'https://www.mediafire.com/file/iyngfbomye8axh3/Android_reset_.apk/file',cat:'hacking'},
+  {name:'Unlimited Gmail Generator (No Phone Number)',url:'https://www.mediafire.com/file/watf6hh6jhgx995/GMAIL_WITHOUT_PHONE_NUMBERS_.zip/file',cat:'hacking'},
+  {name:'Carding Course Android Phone (Blog)',url:'https://mrlegendhub.blogspot.com/2023/12/carding-with-android-phone-all-carding.html?m=1',cat:'hacking'},
+  {name:'ATM Hacking Course (Blog)',url:'https://mrlegendhub.blogspot.com/2023/12/atm-hacking-course.html?m=1',cat:'hacking'},
+  {name:'WiFi Hacking Course Part 1 (Drive)',url:'https://drive.google.com/file/d/1nvH320EDqW-6bA0DqxM_6DZiSYF67Voi/view?usp=drivesdk',cat:'hacking'},
+  {name:'WiFi Hacking Course Part 2 (Drive)',url:'https://drive.google.com/file/d/1sNVNY_FgXnXojl998rZDsRzZg4cYswyO/view?usp=drivesdk',cat:'hacking'},
+  {name:'WiFi Hacking Course Part 3 (Drive)',url:'https://drive.google.com/file/d/1XkMJRPTx2qLcRrCr9F3YAY100pG8qaKv/view?usp=drivesdk',cat:'hacking'},
+  {name:'WhatsApp OTP Lock Method (Blog)',url:'https://mrlegendhub.blogspot.com/2024/02/whatsapp-otp-lock-method.html?m=1',cat:'hacking'},
+  {name:'Phone Dead Virus APK',url:'https://www.mediafire.com/file/in413nyxxyhq1ob/car_collication.apk/file',cat:'hacking'},
+  {name:'WhatsApp Tools & Status Saver APK',url:'https://www.mediafire.com/file/n175082nspz8hll/com.whatstools.statussaver.directchat.trendingstatus.searchprofile-2.2.2.apk/file',cat:'hacking'},
+  {name:'AbheeBhai Pro Database APK',url:'https://www.mediafire.com/file/x5hnbp5wchcnbft/AbheeBhai_Pro_Database.Apk/file',cat:'hacking'},
+  {name:'Gallery Crash APK',url:'https://www.mediafire.com/file/ua3grks0dz5h0hh/gallery_crash.zip/file',cat:'hacking'},
+  {name:'TikTok USA Account Making Method',url:'https://www.mediafire.com/file/4hhckbdjpqy4mwv/TikTok_USA_account_making.7z/file',cat:'hacking'},
+  {name:'Number Hide (Fake WhatsApp) APK',url:'https://www.mediafire.com/file/de8hz1gsr4vq1zr/FAKE_WHATSAPP_1.0.apk/file',cat:'hacking'},
+  {name:'SMS Bomber APK (Bombit Up)',url:'https://www.mediafire.com/file/menvw422s86p0ey/com.romreviewer.bombitup-4.3.apk/file',cat:'hacking'},
+  {name:'Netflix Checker Tool',url:'https://mega.nz/file/2AdyFBYC#scQqKzRMfUmY8Y7GpRH0qKAsAEAJ-jXE7XBBeq08q4U',cat:'hacking'},
+  {name:'Dark Team 46 Toolkit V2.0 (200+ Hacks)',url:'https://www.mediafire.com/file/uas6y6s99s87cl2/Dark+Team+Toolkit.apk/file',cat:'hacking'},
+  {name:'Free Fire Magic Bullet & Location Hack',url:'https://www.mediafire.com/file/pd5q2qavkecxun9/global_magic_bullet_location.7z/file',cat:'hacking'},
+  {name:'Free Fire Headshot File',url:'https://www.mediafire.com/file/t7mdrhvor0vy18m/HEADSHOT_FILE_BY_HACKER_76.zip/file',cat:'hacking'},
+  {name:'Free Fire Panel XSUIT File',url:'https://www.mediafire.com/file/fedpj1p5ialdxyo/XSUIT_FILE_BY_HACKER_76.zip/file',cat:'hacking'},
+  {name:'Dark Hacker Toolkit APK (100+ Hacks)',url:'https://www.mediafire.com/file/jvxfa76bk5oasnl/DARK_HACKER_TOOLKIT.apk/file',cat:'hacking'},
+  {name:'Call Bomber Termux Commands',url:'https://www.mediafire.com/file/b3qhue1vteo0u84/call.bomber.txt/file',cat:'hacking'},
+  {name:'UK Fake Number Trick (Drive)',url:'https://drive.google.com/drive/folders/1eG82-12Vr7k6TNJ9iG2_5h669gKnbEQ3',cat:'hacking'},
+  {name:'Phishing Page Tutorial Video',url:'https://www.mediafire.com/file/q6d9irj5jy5hpeo/VID-20230806-WA0113.mp4/file',cat:'hacking'},
+  {name:'EasyPaisa Animation Receipt APK',url:'https://www.mediafire.com/file/fp8ualjy5on6n5b/EasyPaisa+Recipt_3.0.apk/file',cat:'misc'},
+  {name:'EasyPaisa Fake History APK',url:'https://www.mediafire.com/file/u29u3okyigjprdn/EasyPaisa+History_3.0.apk/file',cat:'misc'},
+  {name:'EasyPaisa Screenshot APK',url:'https://www.mediafire.com/file/9qlk491uhbbeh1f/Easypaisa+Screenshot_1.0.apk/file',cat:'misc'},
+  {name:'JazzCash Screenshot APK',url:'https://www.mediafire.com/file/7ah2esgw6bfew11/Jazz+Cash+Screenshot_1.0.apk/file',cat:'misc'},
+  {name:'EasyPaisa to Bank Transfer APK',url:'https://www.mediafire.com/file/n7mwjbx5lvqjgvt/EasyPaisa+to+Bank_3.0.apk/file',cat:'misc'},
+  {name:'EasyPaisa Real Screenshot APK',url:'https://www.mediafire.com/file/hxd3qczg08l1o6z/EasyPaisa+screenshot+real_3.0.apk/file',cat:'misc'},
+  {name:'FamePay Screenshot APK',url:'https://www.mediafire.com/file/555im1p6q15jlcf/FamPay_7.1.apk/file',cat:'misc'},
+  {name:'JazzCash Animation Receipt APK',url:'https://www.mediafire.com/file/oolzaitch0glaw5/JazzCash+receipt_1.0.apk/file',cat:'misc'},
+  {name:'Telegram Premium APK',url:'https://www.mediafire.com/file/hq9e84oddhzdg8z/MH_Tech_Telegram_premium.apk/file',cat:'misc'},
+  {name:'Wallpaper Hub (Ultra HD Collection)',url:'https://black-killer.pages.dev/wallpaperhub',cat:'misc'},
+  {name:'Premium Mod Apps Bundle 2024 (20+ Apps)',url:'https://drive.google.com/drive/folders/1LV5N9nN68WHDKKwljqJkZmhcBaAkcme0',cat:'misc'}
+];
 
-<div class="device-info" id="deviceInfo">
-  <span id="devTime">--:--</span>
-  <span id="devBattery">🔋 --%</span>
-  <span id="devName">📱 Device</span>
-</div>
+var catNames={all:'All Access',dev:'Development',hacking:'Cyber Security',ai:'AI & Bots',earning:'Monetization',editing:'Editing',design:'Design',marketing:'Marketing',misc:'Misc',islamic:'Islamic',tv:'TV Channels'};
+var catColors={dev:'#60a5fa',hacking:'#ef4444',ai:'#a78bfa',earning:'#34d399',editing:'#fb923c',design:'#f472b6',marketing:'#facc15',misc:'#94a3b8',islamic:'#22c55e',tv:'#ef4444'};
 
-<div class="loading-screen" id="ls">
-  <div class="loading-text">WELCOME TO<br><span>MALIK JALAL</span><br>TOOLS HUB</div>
-  <div class="spinner"></div>
-</div>
-
-<div class="login-overlay" id="lo">
-  <div class="islamic-header">
-    <div class="urdu">کیا آج آپ نے درود شریف پڑھا ؟</div>
-    <div class="arabic">صلى الله عليه وآله وسلم</div>
-    <div class="hadith">حضور نبی کریم ﷺ نے ارشاد فرمایا کہ جو شخص ایک مرتبہ درود شریف پڑھتا ہے اللہ تعالی اُس پر دس رحمتیں نازل فرماتا ہے، دس گناہ معاف کرتا ہے اور دس درجے بلند کرتا ہے</div>
-  </div>
-  <div class="login-card">
-    <img src="https://cdn.phototourl.com/member/2026-06-14-0b9a8795-57a5-4e7c-b42a-276c35844a80.jpg" id="loginLogo" alt="MJ" title="5-Click for Login Admin">
-    <h2>Malik Jalal Tools Hub</h2>
-    <p class="sub">🔐 417+ Premium Tools — Private Access</p>
-    <input id="luser" placeholder="👤 Username" type="text">
-    <input id="lpass" placeholder="🔒 Password" type="password" onkeydown="if(event.key==='Enter')DL()">
-    <button class="login-btn" onclick="DL()">🔓 Unlock Toolkit</button>
-    <div class="login-error" id="lerr"></div>
-    <button class="pay-btn" onclick="document.getElementById('payM').classList.add('show')">💎 Get Access - Rs 2500</button>
-    <p style="font-size:.6rem;color:#6b7280;margin-top:8px">👑 MALIK JALAL | Bahawalpur, Pakistan</p>
-  </div>
-</div>
-
-<div class="edit-modal" id="payM">
-  <div class="modal-content" style="text-align:center">
-    <h3>💎 Premium Access</h3>
-    <div style="font-size:2rem;font-weight:800;color:#f59e0b">Rs 2500</div>
-    <div style="background:#dd1c1a;color:#fff;padding:12px;border-radius:10px;margin:10px 0">📱 <b>JazzCash: +92 3037376848</b><br><small>MALIK JALAL</small></div>
-    <a href="https://wa.me/923417186108" target="_blank" style="display:block;background:#25d366;color:#fff;padding:10px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.8rem">💚 WhatsApp: +92 3417186108</a>
-    <button onclick="document.getElementById('payM').classList.remove('show')" style="background:rgba(255,255,255,0.06);margin-top:8px;width:100%">Close</button>
-  </div>
-</div>
-
-<div class="logout-btn" id="lobtn" onclick="DLO()">🚪</div>
-
-<div class="main-header" id="mh" style="display:none">
-  <div class="header-left">
-    <img src="https://cdn.phototourl.com/member/2026-06-14-0b9a8795-57a5-4e7c-b42a-276c35844a80.jpg" class="header-logo-img" alt="MJ">
-    <h1>Malik <span>Jalal</span> Tools Hub</h1>
-  </div>
-  <div class="header-right">
-    <button class="btn-outline" onclick="NC()">＋ New Chat</button>
-    <button class="btn-danger" onclick="DLO()">🚪 Logout</button>
-  </div>
-</div>
-
-<div class="main-layout" id="ml" style="display:none">
-  <div class="search-wrap"><input id="sq" oninput="RF()" placeholder="🔍 Search 417+ tools..." type="text"><i class="fas fa-search"></i></div>
-  <div class="cats" id="cb"></div>
-  <a class="quran-banner" href="https://malikjalal-quranpak.edgeone.app" target="_blank"><span style="font-size:1.8rem">🕌</span><div><strong>📖 Quran Pak</strong><br><small>Audio • Translation</small></div></a>
-  <div class="tools-grid" id="tg"></div>
-  
-  <div class="admin-panel" id="ap">
-    <h3>👑 Admin Panel</h3>
-    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:#f59e0b">🎨 Customize</h5>
-      <div class="file-upload-box" onclick="document.getElementById('logoUpload').click()"><p>🖼️ Upload Logo</p><input type="file" id="logoUpload" accept="image/*" onchange="CL(event)"></div>
-      <div class="file-upload-box" onclick="document.getElementById('bgVideoUpload').click()"><p>🎬 Upload BG Video</p><input type="file" id="bgVideoUpload" accept="video/*" onchange="CV(event)"></div>
-      <div class="file-upload-box" onclick="document.getElementById('audioUpload').click()"><p>🔊 Upload Welcome Audio</p><input type="file" id="audioUpload" accept="audio/*" onchange="CA(event)"></div>
-      <button class="btn-save" onclick="PA()" style="font-size:.6rem">▶️ Test Audio</button>
-    </div>
-    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:#f59e0b">🔐 Change Passwords</h5>
-      <input id="newMasterPass" placeholder="New Master Password" type="password">
-      <input id="newAdminPass" placeholder="New Admin Password" type="password">
-      <button class="btn-save" onclick="CP()">💾 Save</button>
-    </div>
-    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:#f59e0b">👥 User Management</h5>
-      <button class="btn-add" onclick="AMU()" style="font-size:.65rem">➕ Add User</button>
-      <div id="ulist"></div>
-    </div>
-    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:#f59e0b">➕ Add Resource</h5>
-      <input id="nn" placeholder="Name"><input id="nu" placeholder="URL">
-      <select id="nc"><option value="dev">Development</option><option value="hacking">Cyber Security</option><option value="ai">AI & Bots</option><option value="earning">Monetization</option><option value="editing">Editing</option><option value="design">Design</option><option value="marketing">Marketing</option><option value="misc">Misc</option><option value="islamic">Islamic</option></select>
-      <input id="nd" placeholder="Desc"><select id="nt"><option value="free">Free</option><option value="premium">Premium</option><option value="new">New</option></select>
-      <button class="btn-add" onclick="ANT()">➕ Add</button>
-    </div>
-    <h5>📋 Resources</h5><div id="atlist"></div>
-    <button class="btn-del" onclick="RST()">🗑 Reset</button>
-    <button onclick="document.getElementById('ap').classList.remove('show')" style="background:rgba(255,255,255,0.06)">Close</button>
-  </div>
-</div>
-
-<div class="edit-modal" id="em">
-  <div class="modal-content">
-    <h3>✏️ Edit</h3>
-    <input id="ei" type="hidden"><input id="en" placeholder="Name"><input id="eu" placeholder="URL">
-    <select id="ec"><option value="dev">Development</option><option value="hacking">Cyber Security</option><option value="ai">AI & Bots</option><option value="earning">Monetization</option><option value="editing">Editing</option><option value="design">Design</option><option value="marketing">Marketing</option><option value="misc">Misc</option><option value="islamic">Islamic</option></select>
-    <input id="ed" placeholder="Desc"><select id="et"><option value="free">Free</option><option value="premium">Premium</option><option value="new">New</option></select>
-    <button class="btn-save" onclick="SE()">💾 Save</button>
-    <button onclick="document.getElementById('em').classList.remove('show')" style="background:rgba(255,255,255,0.06)">Cancel</button>
-  </div>
-</div>
-
-<div class="edit-modal" id="loginAdminPanel">
-  <div class="modal-content">
-    <h3>🔧 Login Page Customizer</h3>
-    <input id="lTitle" placeholder="Login Title" onchange="ULT()">
-    <input id="lSub" placeholder="Login Subtitle" onchange="ULT()">
-    <input id="lFooter" placeholder="Footer Text" onchange="ULT()">
-    <div class="file-upload-box" onclick="document.getElementById('loginBgUpload').click()"><p>🖼️ Upload BG Image</p><input type="file" id="loginBgUpload" accept="image/*" onchange="CLB(event)"></div>
-    <button onclick="document.getElementById('loginAdminPanel').classList.remove('show')" style="background:rgba(255,255,255,0.06);margin-top:8px;width:100%">Close</button>
-  </div>
-</div>
-
-<div class="footer"><p>Developed with ❤️ by <strong style="color:#f59e0b">MALIK JALAL</strong> | Bahawalpur, Pakistan</p></div>
-<div class="toast" id="toast"></div>
-
-<script src="script.js"></script>
-</body>
-</html>
+function GT(){try{var s=localStorage.getItem(SK);return s?JSON.parse(s):JSON.parse(JSON.stringify(dT))}catch(e){return JSON.parse(JSON.stringify(dT))}}
+function ST(t){try{localStorage.setItem(SK,JSON.stringify(t))}catch(e){}}
+function GU(){try{var s=localStorage.getItem(UK);return s?JSON.parse(s):[]}catch(e){return[]}}
+function SU(u){localStorage.setItem(UK,JSON.stringify(u))}
+function UDI(){document.getElementById('devTime').textContent=new Date().toLocaleTimeString();if(navigator.getBattery){navigator.getBattery().then(function(b){document.getElementById('devBattery').textContent='🔋 '+Math.round(b.level*100)+'%'}).catch(function(){})}}
+setInterval(UDI,5000);UDI();
+function CV(e){var f=e.target.files[0];if(!f)return;var url=URL.createObjectURL(f);var v=document.getElementById('bgVideo');v.src=url;v.classList.add('show');v.loop=true;v.muted=true;v.play().catch(function(){});localStorage.setItem(BGK,url);T('✅ Video playing!')}
+(function(){try{var s=localStorage.getItem(BGK);if(s){var v=document.getElementById('bgVideo');v.src=s;v.classList.add('show');v.loop=true;v.muted=true;v.play().catch(function(){})}}catch(e){}})();
+function CA(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){localStorage.setItem(AUDK,ev.target.result);if(bgAudio)bgAudio.pause();bgAudio=new Audio(ev.target.result);T('✅ Audio saved!')};r.readAsDataURL(f)}
+function PA(){if(bgAudio){bgAudio.currentTime=0;bgAudio.play().catch(function(){})}else{try{var s=localStorage.getItem(AUDK);if(s){bgAudio=new Audio(s);bgAudio.play().catch(function(){})}else{T('No audio!')}}catch(e){T('No audio!')}}}
+function playWelcome(){try{var s=localStorage.getItem(AUDK);if(s){if(bgAudio)bgAudio.pause();bgAudio=new Audio(s);bgAudio.play().catch(function(){})}}catch(e){}}
+function SL2(url){var els=document.querySelectorAll('#loginLogo,.header-logo-img');els.forEach(function(el){if(el)el.src=url})}
+function CL(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){SL2(ev.target.result);localStorage.setItem(LOGOK,ev.target.result);T('✅ Logo updated!')};r.readAsDataURL(f)}
+(function(){try{var s=localStorage.getItem(LOGOK);if(s)SL2(s)}catch(e){}})();
+function CLB(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){document.body.style.backgroundImage='url('+ev.target.result+')';document.body.style.backgroundSize='cover';localStorage.setItem(LOGINBGK,ev.target.result);T('✅ BG set!')};r.readAsDataURL(f)}
+(function(){try{var s=localStorage.getItem(LOGINBGK);if(s){document.body.style.backgroundImage='url('+s+')';document.body.style.backgroundSize='cover'}}catch(e){}})();
+function ULT(){var t=document.getElementById('lTitle').value;if(t)document.querySelector('.login-card h2').textContent=t;var s=document.getElementById('lSub').value;if(s)document.querySelector('.login-card .sub').textContent=s;var f=document.getElementById('lFooter').value;if(f)document.getElementById('loginFooter').textContent=f;localStorage.setItem(LOGINPAGEK,JSON.stringify({title:t,sub:s,footer:f}))}
+(function(){try{var s=localStorage.getItem(LOGINPAGEK);if(s){var d=JSON.parse(s);if(d.title)document.querySelector('.login-card h2').textContent=d.title;if(d.sub)document.querySelector('.login-card .sub').textContent=d.sub}}catch(e){}})();
+function CP(){var nm=document.getElementById('newMasterPass').value.trim();var na=document.getElementById('newAdminPass').value.trim();if(nm){MP=nm;localStorage.setItem('mj_master_v18',JSON.stringify({u:MU,p:nm}));T('✅ Master password updated!')}if(na){AP=na;localStorage.setItem('mj_admin_v18',na);T('✅ Admin password updated!')}}
+(function(){try{var s=localStorage.getItem('mj_master_v18');if(s){var d=JSON.parse(s);MU=d.u;MP=d.p}}catch(e){};try{var sa=localStorage.getItem('mj_admin_v18');if(sa)AP=sa}catch(e){}})();
+function DL(){var u=document.getElementById('luser').value.trim(),p=document.getElementById('lpass').value,e=document.getElementById('lerr');e.style.display='none';if(!u||!p){e.style.display='block';e.textContent='Enter credentials!';return}if(u===MU&&p===MP){li=true;im=true;cu={username:u,name:'Malik Jalal'};playWelcome();FL();return}var users=GU(),user=users.find(function(x){return x.username===u&&x.password===p});if(user&&user.approved){li=true;im=false;cu=user;playWelcome();FL();return}e.style.display='block';e.textContent='Invalid!';}
+function FL(){document.getElementById('lo').classList.add('hidden');document.getElementById('ls').classList.add('hidden');document.getElementById('mh').style.display='flex';document.getElementById('ml').style.display='block';document.getElementById('lobtn').style.display='flex';RA();T('✅ Welcome '+cu.name+'!')}
+function DLO(){li=false;im=false;ia=false;cu=null;document.getElementById('lo').classList.remove('hidden');document.getElementById('mh').style.display='none';document.getElementById('ml').style.display='none';document.getElementById('lobtn').style.display='none'}
+function RA(){RC();RT()}
+function RC(){var cats=['all','dev','hacking','ai','earning','editing','design','marketing','misc','islamic'];document.getElementById('cb').innerHTML=cats.map(function(c){return '<button class="cat-btn'+(cc===c?' active':'')+'" onclick="FC(\''+c+'\')">'+(catNames[c]||c)+'</button>';}).join('');}
+function RT(){var tools=GT(),f=cc==='all'?tools:tools.filter(function(t){return t.cat===cc});var q=document.getElementById('sq').value.toLowerCase();if(q)f=f.filter(function(t){return t.name.toLowerCase().indexOf(q)!==-1});var g=document.getElementById('tg');if(!f.length){g.innerHTML='<div style="text-align:center;padding:40px;color:var(--mut);grid-column:1/-1">🔍 No tools found</div>';return}g.innerHTML=f.map(function(t,i){var cc2=catColors[t.cat]||'#94a3b8';return '<a href="'+t.url+'" target="_blank" class="tool-card"><span class="cat-badge" style="background:'+cc2+'18;color:'+cc2+'">'+(catNames[t.cat]||t.cat)+'</span><h4>'+t.name+'</h4><span class="dot"></span><span class="dl-btn">ACCESS TOOL</span></a>';}).join('');}
+function FC(cat){cc=cat;RC();RT()}function RF(){RT()}function NC(){cc='all';document.getElementById('sq').value='';RC();RT()}
+function OA(){if(!im)return T('Master only!');var p=prompt('Admin Password:');if(p===AP){ia=true;document.getElementById('ap').classList.add('show');RAL();RUL();T('Admin')}else{T('Wrong')}}
+function RAL(){var tools=GT();document.getElementById('atlist').innerHTML=tools.map(function(t,i){return '<div style="background:var(--card2);padding:6px 8px;margin:3px 0;border-radius:6px;display:flex;align-items:center;gap:8px"><div style="flex:1"><strong style="font-size:.65rem">'+t.name+'</strong><br><small style="color:var(--mut)">'+(catNames[t.cat]||t.cat)+'</small></div><button class="btn-edit" onclick="OE('+i+')">✏️</button><button class="btn-del" onclick="DT('+i+')">🗑</button></div>';}).join('');}
+function RUL(){var users=GU();var h='';if(!users.length){h='<p style="font-size:.65rem;color:var(--mut)">No users.</p>'}else{users.forEach(function(u){h+='<div style="background:var(--card2);padding:6px 8px;margin:3px 0;border-radius:6px"><strong style="font-size:.65rem">'+u.name+'</strong> <small style="color:var(--mut)">| '+u.username+' | '+u.phone+'</small></div>'})}document.getElementById('ulist').innerHTML=h}
+function AMU(){var n=prompt('Name:');if(!n)return;var ph=prompt('Phone:');if(!ph)return;var un=prompt('Username:');if(!un)return;var pw=prompt('Pass (4+):');if(!pw||pw.length<4)return;var users=GU();users.push({name:n,phone:ph,username:un,password:pw,approved:true});SU(users);RUL();T('Added')}
+function ANT(){var t={name:document.getElementById('nn').value.trim(),url:document.getElementById('nu').value.trim(),cat:document.getElementById('nc').value,desc:document.getElementById('nd').value.trim()||'',tag:document.getElementById('nt').value};if(!t.name||!t.url)return T('Required!');var tools=GT();tools.push(t);ST(tools);['nn','nu','nd'].forEach(function(id){document.getElementById(id).value=''});RA();RAL();T('Added!')}
+function OE(i){var t=GT()[i];if(!t)return;document.getElementById('ei').value=i;document.getElementById('en').value=t.name;document.getElementById('eu').value=t.url;document.getElementById('ec').value=t.cat;document.getElementById('ed').value=t.desc||'';document.getElementById('et').value=t.tag||'free';document.getElementById('em').classList.add('show')}
+function SE(){var i=parseInt(document.getElementById('ei').value),tools=GT();if(i>=0&&i<tools.length){tools[i]={name:document.getElementById('en').value.trim(),url:document.getElementById('eu').value.trim(),cat:document.getElementById('ec').value,desc:document.getElementById('ed').value.trim(),tag:document.getElementById('et').value};ST(tools);document.getElementById('em').classList.remove('show');RA();RAL();T('Updated!')}}
+function DT(i){if(confirm('Delete?')){var tools=GT();tools.splice(i,1);ST(tools);RA();RAL();T('Deleted')}}
+function RST(){if(confirm('Reset?')){localStorage.removeItem(SK);RA();RAL();T('Reset')}}
+function T(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2000)}
+var _lcl=0;document.getElementById('loginLogo').addEventListener('click',function(){_lcl++;if(_lcl>=5){var p=prompt('🔐 Login Admin Password:');if(p===AP){document.getElementById('loginAdminPanel').classList.add('show')}else{T('Wrong!')}_lcl=0}setTimeout(function(){_lcl=0},2000)});
+var _cl=0;document.querySelector('.header-logo-img')?.addEventListener('click',function(){if(!li)return;_cl++;if(_cl>=3){OA();_cl=0}setTimeout(function(){_cl=0},1500)});
+setTimeout(function(){document.getElementById('ls').classList.add('hidden')},2000);
