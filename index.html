@@ -40,17 +40,17 @@
     <button class="login-btn" onclick="DL()">🔓 Unlock Toolkit</button>
     <div class="login-error" id="lerr"></div>
     <button class="pay-btn" onclick="document.getElementById('payM').classList.add('show')">💎 Get Access - Rs 2500</button>
-    <p style="font-size:.6rem;color:var(--mut);margin-top:8px" id="loginFooter">👑 MALIK JALAL | Bahawalpur, Pakistan</p>
+    <p style="font-size:.6rem;color:#6b7280;margin-top:8px">👑 MALIK JALAL | Bahawalpur, Pakistan</p>
   </div>
 </div>
 
 <div class="edit-modal" id="payM">
   <div class="modal-content" style="text-align:center">
     <h3>💎 Premium Access</h3>
-    <div style="font-size:2rem;font-weight:800;color:var(--gold)">Rs 2500</div>
+    <div style="font-size:2rem;font-weight:800;color:#f59e0b">Rs 2500</div>
     <div style="background:#dd1c1a;color:#fff;padding:12px;border-radius:10px;margin:10px 0">📱 <b>JazzCash: +92 3037376848</b><br><small>MALIK JALAL</small></div>
     <a href="https://wa.me/923417186108" target="_blank" style="display:block;background:#25d366;color:#fff;padding:10px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.8rem">💚 WhatsApp: +92 3417186108</a>
-    <button onclick="document.getElementById('payM').classList.remove('show')" style="background:var(--bdr);margin-top:8px;width:100%">Close</button>
+    <button onclick="document.getElementById('payM').classList.remove('show')" style="background:rgba(255,255,255,0.06);margin-top:8px;width:100%">Close</button>
   </div>
 </div>
 
@@ -75,26 +75,26 @@
   
   <div class="admin-panel" id="ap">
     <h3>👑 Admin Panel</h3>
-    <div style="background:var(--card2);padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:var(--gold)">🎨 Customize</h5>
+    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
+      <h5 style="color:#f59e0b">🎨 Customize</h5>
       <div class="file-upload-box" onclick="document.getElementById('logoUpload').click()"><p>🖼️ Upload Logo</p><input type="file" id="logoUpload" accept="image/*" onchange="CL(event)"></div>
-      <div class="file-upload-box" onclick="document.getElementById('bgVideoUpload').click()"><p>🎬 Upload Background Video</p><input type="file" id="bgVideoUpload" accept="video/*" onchange="CV(event)"></div>
+      <div class="file-upload-box" onclick="document.getElementById('bgVideoUpload').click()"><p>🎬 Upload BG Video</p><input type="file" id="bgVideoUpload" accept="video/*" onchange="CV(event)"></div>
       <div class="file-upload-box" onclick="document.getElementById('audioUpload').click()"><p>🔊 Upload Welcome Audio</p><input type="file" id="audioUpload" accept="audio/*" onchange="CA(event)"></div>
       <button class="btn-save" onclick="PA()" style="font-size:.6rem">▶️ Test Audio</button>
     </div>
-    <div style="background:var(--card2);padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:var(--gold)">🔐 Change Passwords</h5>
+    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
+      <h5 style="color:#f59e0b">🔐 Change Passwords</h5>
       <input id="newMasterPass" placeholder="New Master Password" type="password">
       <input id="newAdminPass" placeholder="New Admin Password" type="password">
       <button class="btn-save" onclick="CP()">💾 Save</button>
     </div>
-    <div style="background:var(--card2);padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:var(--gold)">👥 User Management</h5>
+    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
+      <h5 style="color:#f59e0b">👥 User Management</h5>
       <button class="btn-add" onclick="AMU()" style="font-size:.65rem">➕ Add User</button>
       <div id="ulist"></div>
     </div>
-    <div style="background:var(--card2);padding:10px;border-radius:8px;margin-bottom:8px">
-      <h5 style="color:var(--gold)">➕ Add Resource</h5>
+    <div style="background:#1e222d;padding:10px;border-radius:8px;margin-bottom:8px">
+      <h5 style="color:#f59e0b">➕ Add Resource</h5>
       <input id="nn" placeholder="Name"><input id="nu" placeholder="URL">
       <select id="nc"><option value="dev">Development</option><option value="hacking">Cyber Security</option><option value="ai">AI & Bots</option><option value="earning">Monetization</option><option value="editing">Editing</option><option value="design">Design</option><option value="marketing">Marketing</option><option value="misc">Misc</option><option value="islamic">Islamic</option></select>
       <input id="nd" placeholder="Desc"><select id="nt"><option value="free">Free</option><option value="premium">Premium</option><option value="new">New</option></select>
@@ -102,7 +102,7 @@
     </div>
     <h5>📋 Resources</h5><div id="atlist"></div>
     <button class="btn-del" onclick="RST()">🗑 Reset</button>
-    <button onclick="document.getElementById('ap').classList.remove('show')" style="background:var(--bdr)">Close</button>
+    <button onclick="document.getElementById('ap').classList.remove('show')" style="background:rgba(255,255,255,0.06)">Close</button>
   </div>
 </div>
 
@@ -113,7 +113,7 @@
     <select id="ec"><option value="dev">Development</option><option value="hacking">Cyber Security</option><option value="ai">AI & Bots</option><option value="earning">Monetization</option><option value="editing">Editing</option><option value="design">Design</option><option value="marketing">Marketing</option><option value="misc">Misc</option><option value="islamic">Islamic</option></select>
     <input id="ed" placeholder="Desc"><select id="et"><option value="free">Free</option><option value="premium">Premium</option><option value="new">New</option></select>
     <button class="btn-save" onclick="SE()">💾 Save</button>
-    <button onclick="document.getElementById('em').classList.remove('show')" style="background:var(--bdr)">Cancel</button>
+    <button onclick="document.getElementById('em').classList.remove('show')" style="background:rgba(255,255,255,0.06)">Cancel</button>
   </div>
 </div>
 
@@ -124,7 +124,7 @@
     <input id="lSub" placeholder="Login Subtitle" onchange="ULT()">
     <input id="lFooter" placeholder="Footer Text" onchange="ULT()">
     <div class="file-upload-box" onclick="document.getElementById('loginBgUpload').click()"><p>🖼️ Upload BG Image</p><input type="file" id="loginBgUpload" accept="image/*" onchange="CLB(event)"></div>
-    <button onclick="document.getElementById('loginAdminPanel').classList.remove('show')" style="background:var(--bdr);margin-top:8px;width:100%">Close</button>
+    <button onclick="document.getElementById('loginAdminPanel').classList.remove('show')" style="background:rgba(255,255,255,0.06);margin-top:8px;width:100%">Close</button>
   </div>
 </div>
 
