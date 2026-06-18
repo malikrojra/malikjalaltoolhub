@@ -379,6 +379,47 @@ function ULT(){var t=document.getElementById('lTitle').value;if(t)document.query
 function CP(){var nm=document.getElementById('newMasterPass').value.trim();var na=document.getElementById('newAdminPass').value.trim();if(nm){MP=nm;localStorage.setItem('mj_master_v19',JSON.stringify({u:MU,p:nm}));T('✅ Master password updated!')}if(na){AP=na;localStorage.setItem('mj_admin_v19',na);T('✅ Admin password updated!')}}
 (function(){try{var s=localStorage.getItem('mj_master_v19');if(s){var d=JSON.parse(s);MU=d.u;MP=d.p}}catch(e){};try{var sa=localStorage.getItem('mj_admin_v19');if(sa)AP=sa}catch(e){}})();
 
+function FL(){
+  document.getElementById('lo').classList.add('hidden');
+  document.getElementById('ls').classList.add('hidden');
+  document.getElementById('mh').style.display='flex';
+  document.getElementById('ml').style.display='block';
+  document.getElementById('lobtn').style.display='flex';
+  
+  // ⭐ SIRF MASTER KE LIYE DASHBOARD
+  if(im && cu.username === MU){
+    document.getElementById('adminDashboard').style.display = 'block';
+    showAdminInfo();
+  }
+  
+  RA();T('✅ Welcome '+cu.name+'!');
+}
+
+function showAdminInfo(){
+  var info = document.getElementById('adminInfo');
+  var deviceId = getDeviceId();
+  var totalUsers = GU().length;
+  var totalTools = GT().length;
+  
+  // Get IP
+  fetch('https://api.ipify.org?format=json')
+    .then(r => r.json())
+    .then(d => {
+      info.innerHTML = `
+        🔑 Device: ${deviceId.substring(0,12)}... | 
+        🌍 IP: ${d.ip} | 
+        👥 Users: ${totalUsers} | 
+        📦 Tools: ${totalTools}
+      `;
+    })
+    .catch(() => {
+      info.innerHTML = `
+        🔑 Device: ${deviceId.substring(0,12)}... | 
+        👥 Users: ${totalUsers} | 
+        📦 Tools: ${totalTools}
+      `;
+    });
+}
 function DL(){
   var u=document.getElementById('luser').value.trim(),p=document.getElementById('lpass').value,e=document.getElementById('lerr');e.style.display='none';
   if(!u||!p){e.style.display='block';e.textContent='Enter credentials!';return}
