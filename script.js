@@ -1,6 +1,7 @@
 // ╔══════════════════════════════════════╗
 // ║  MALIK JALAL TOOLS HUB v19.1      ║
-// ║  417+ TOOLS + IP ADDRESS + FULL   ║
+// ║  417+ TOOLS + FULL PROTECTION     ║
+// ║  + IP ADDRESS TRACKING            ║
 // ╚══════════════════════════════════════╝
 
 // ⭐ OBFUSCATED CREDENTIALS
@@ -33,7 +34,7 @@ function getLockedDevice(username){try{var locks=JSON.parse(localStorage.getItem
 function setLockedDevice(username){try{var locks=JSON.parse(localStorage.getItem(LOCKK)||'{}');locks[username]=getDeviceId();localStorage.setItem(LOCKK,JSON.stringify(locks));return true}catch(e){return false}}
 function checkDeviceLock(username){if(username===MU)return'ok';var locked=getLockedDevice(username);if(!locked)return'first';if(locked!==getDeviceId())return'locked';return'ok'}
 
-// ⭐ 417+ TOOLS
+// ⭐ 417+ TOOLS (ALL TOOLS SAME - KOI DATA SKIP NAHI)
 var dT=[
   {name:'Quran Pak',url:'https://malikjalal-quranpak.edgeone.app',cat:'islamic'},
   {name:'Malik Jalal GPT',url:'https://malikjalalgpt.edgeone.app',cat:'ai'},
@@ -321,6 +322,7 @@ var dT=[
   {name:'Telegram Premium APK',url:'https://www.mediafire.com/file/hq9e84oddhzdg8z/MH_Tech_Telegram_premium.apk/file',cat:'misc'},
   {name:'Wallpaper Hub (Ultra HD Collection)',url:'https://black-killer.pages.dev/wallpaperhub',cat:'misc'},
   {name:'Premium Mod Apps Bundle 2024 (20+ Apps)',url:'https://drive.google.com/drive/folders/1LV5N9nN68WHDKKwljqJkZmhcBaAkcme0',cat:'misc'}
+];
 
 var catNames={all:'All Access',dev:'Development',hacking:'Cyber Security',ai:'AI & Bots',earning:'Monetization',editing:'Editing',design:'Design',marketing:'Marketing',misc:'Misc',islamic:'Islamic',tv:'TV Channels'};
 var catColors={dev:'#60a5fa',hacking:'#ef4444',ai:'#a78bfa',earning:'#34d399',editing:'#fb923c',design:'#f472b6',marketing:'#facc15',misc:'#94a3b8',islamic:'#22c55e',tv:'#ef4444'};
@@ -341,17 +343,17 @@ function UDI(){
 }
 function getIP(){
   fetch('https://api.ipify.org?format=json')
-    .then(function(r){return r.json()})
+    .then(function(r){ return r.json(); })
     .then(function(d){
       var ipEl = document.getElementById('devIP');
-      if(ipEl) ipEl.textContent = '🌍 '+d.ip;
+      if(ipEl) ipEl.textContent = '🌍 ' + d.ip;
     })
     .catch(function(){
       fetch('https://ipapi.co/json/')
-        .then(function(r){return r.json()})
+        .then(function(r){ return r.json(); })
         .then(function(d){
           var ipEl = document.getElementById('devIP');
-          if(ipEl) ipEl.textContent = '🌍 '+d.ip;
+          if(ipEl) ipEl.textContent = '🌍 ' + d.ip;
         })
         .catch(function(){
           var ipEl = document.getElementById('devIP');
@@ -396,7 +398,7 @@ function RA(){RC();RT()}
 function RC(){var cats=['all','dev','hacking','ai','earning','editing','design','marketing','misc','islamic'];document.getElementById('cb').innerHTML=cats.map(function(c){return '<button class="cat-btn'+(cc===c?' active':'')+'" onclick="FC(\''+c+'\')">'+(catNames[c]||c)+'</button>';}).join('');}
 function RT(){var tools=GT(),f=cc==='all'?tools:tools.filter(function(t){return t.cat===cc});var q=document.getElementById('sq').value.toLowerCase();if(q)f=f.filter(function(t){return t.name.toLowerCase().indexOf(q)!==-1});var g=document.getElementById('tg');if(!f.length){g.innerHTML='<div style="text-align:center;padding:40px;color:var(--mut);grid-column:1/-1">🔍 Not found</div>';return}g.innerHTML=f.map(function(t,i){var cc2=catColors[t.cat]||'#94a3b8';return '<a href="'+t.url+'" target="_blank" class="tool-card"><span class="cat-badge" style="background:'+cc2+'18;color:'+cc2+'">'+(catNames[t.cat]||t.cat)+'</span><h4>'+t.name+'</h4><span class="dot"></span><span class="dl-btn">ACCESS TOOL</span></a>';}).join('');}
 function FC(cat){cc=cat;RC();RT()}function RF(){RT()}function NC(){cc='all';document.getElementById('sq').value='';RC();RT()}
-function OA(){if(!im)return T('Master only!');var p=prompt('Admin Password:');if(p===AP){ia=true;document.getElementById('ap').classList.add('show');RAL();RUL();T('Admin')}else{T('Wrong!')}}
+function OA(){if(!im)return T('Master only!');var p=prompt('Admin Password:');if(p===AP){ia=true;document.getElementById('ap').classList.add('show');RAL();RUL();T('Admin Unlocked')}else{T('Wrong!')}}
 function RAL(){var tools=GT();document.getElementById('atlist').innerHTML=tools.map(function(t,i){return '<div style="background:var(--card2);padding:6px 8px;margin:3px 0;border-radius:6px;display:flex;align-items:center;gap:8px"><div style="flex:1"><strong style="font-size:.65rem">'+t.name+'</strong><br><small style="color:var(--mut)">'+(catNames[t.cat]||t.cat)+'</small></div><button class="btn-edit" onclick="OE('+i+')">✏️</button><button class="btn-del" onclick="DT('+i+')">🗑</button></div>';}).join('');}
 function RUL(){var users=GU();var h='';if(!users.length){h='<p style="font-size:.65rem;color:var(--mut)">No users.</p>'}else{users.forEach(function(u){h+='<div style="background:var(--card2);padding:6px 8px;margin:3px 0;border-radius:6px"><strong style="font-size:.65rem">'+u.name+'</strong> <small style="color:var(--mut)">| '+u.username+' | '+u.phone+'</small></div>'})}document.getElementById('ulist').innerHTML=h}
 function AMU(){var n=prompt('Name:');if(!n)return;var ph=prompt('Phone:');if(!ph)return;var un=prompt('Username:');if(!un)return;var pw=prompt('Pass (4+):');if(!pw||pw.length<4)return;var users=GU();users.push({name:n,phone:ph,username:un,password:pw,approved:true});SU(users);RUL();T('Added')}
