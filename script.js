@@ -1,13 +1,41 @@
-// ╔══════════════════════════════════╗
-// ║  MALIK JALAL TOOLS HUB v18    ║
-// ║  417+ TOOLS + ALL FEATURES    ║
-// ╚══════════════════════════════════╝
-var MU='malikjalal514',MP='malik@1122',AP='malikrakhana',SK='mjt_v18',UK='mju_v18',LOGOK='mj_logo_v18',BGK='mj_bg_v18',AUDK='mj_audio_v18',LOGINPAGEK='mj_loginpage_v18',LOGINBGK='mj_loginbg_v18';
+// ╔══════════════════════════════════════╗
+// ║  MALIK JALAL TOOLS HUB v19        ║
+// ║  417+ TOOLS + FULL PROTECTION     ║
+// ╚══════════════════════════════════════╝
+
+// ⭐ OBFUSCATED CREDENTIALS
+var _x=atob('bWFsaWtqYWxhbDUxNA=='); // malikjalal514
+var _y=atob('bWFsaWtAMTEyMg=='); // malik@1122
+var _z=atob('bWFsaWtyYWtoYW5h'); // malikrakhana
+var MU=_x,MP=_y,AP=_z;
+var SK='mjt_v19',UK='mju_v19',LOGOK='mj_logo_v19',BGK='mj_bg_v19',AUDK='mj_audio_v19',LOGINPAGEK='mj_loginpage_v19',LOGINBGK='mj_loginbg_v19',LOCKK='mj_devlock_v19';
 var li=false,im=false,ia=false,cc='all',cu=null,bgAudio=null,defaultLogo='https://cdn.phototourl.com/member/2026-06-14-0b9a8795-57a5-4e7c-b42a-276c35844a80.jpg';
+
+// ⭐ DOMAIN LOCK (Allow these domains)
+var ALLOWED=['localhost','127.0.0.1','vercel.app','netlify.app','edgeone.app','pages.dev','tiiny.site'];
+var currentHost=window.location.hostname;
+var domainOK=ALLOWED.some(function(d){return currentHost.includes(d)});
+if(!domainOK&&currentHost!==''){document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0a0a1a;color:#f59e0b;font-size:1.2rem;flex-direction:column;font-family:sans-serif"><div style="font-size:4rem">🔒</div><h2>Domain Locked!</h2><p>Contact: +92 3417186108</p></div>';throw new Error('Domain locked')}
+
+// ⭐ SCREENSHOT BLOCK
+document.addEventListener('keydown',function(e){if(e.key==='PrintScreen'||e.keyCode===44){e.preventDefault();document.body.style.filter='blur(20px)';setTimeout(function(){document.body.style.filter='blur(0px)'},1500);return false}});
+document.addEventListener('visibilitychange',function(){if(document.hidden){document.body.style.filter='blur(20px)'}else{document.body.style.filter='blur(0px)'}});
+
+// ⭐ CONSOLE BLOCK + DEBUGGER TRAP
+document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+document.addEventListener('keydown',function(e){if(e.key==='F12'||e.keyCode===123||(e.ctrlKey&&e.shiftKey&&['I','i','J','j','C','c'].includes(e.key))||(e.ctrlKey&&['u','U','s','S'].includes(e.key))){e.preventDefault();e.stopPropagation();return false}});
+setInterval(function(){var w=window.outerWidth-window.innerWidth>160;var h=window.outerHeight-window.innerHeight>160;if(w||h){document.body.style.filter='blur(20px)';setTimeout(function(){document.body.style.filter='blur(0px)'},2000)}},1000);
+setInterval(function(){var s=+new Date();debugger;if(+new Date()-s>100){document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0f1117;color:#ef4444;font-size:1.5rem;flex-direction:column;font-family:sans-serif"><div style="font-size:4rem">🚫</div><h2>Developer Tools not allowed!</h2><p>Security by MALIK JALAL</p></div>';throw new Error('DevTools')}},500);
+
+// ⭐ DEVICE LOCK SYSTEM
+function getDeviceId(){var d=navigator.userAgent+navigator.language+screen.width+'x'+screen.height+screen.colorDepth+new Date().getTimezoneOffset();var h=0;for(var i=0;i<d.length;i++){h=((h<<5)-h)+d.charCodeAt(i);h|=0}return'DEV_'+Math.abs(h).toString(36)}
+function getLockedDevice(username){try{var locks=JSON.parse(localStorage.getItem(LOCKK)||'{}');return locks[username]||null}catch(e){return null}}
+function setLockedDevice(username){try{var locks=JSON.parse(localStorage.getItem(LOCKK)||'{}');locks[username]=getDeviceId();localStorage.setItem(LOCKK,JSON.stringify(locks));return true}catch(e){return false}}
+function checkDeviceLock(username){if(username===MU)return'ok';var locked=getLockedDevice(username);if(!locked)return'first';if(locked!==getDeviceId())return'locked';return'ok'}
 
 // ⭐ 417+ TOOLS
 var dT=[
-  {name:'Quran Pak',url:'https://malikjalal-quranpak.edgeone.app',cat:'islamic'},
+{name:'Quran Pak',url:'https://malikjalal-quranpak.edgeone.app',cat:'islamic'},
   {name:'Malik Jalal GPT',url:'https://malikjalalgpt.edgeone.app',cat:'ai'},
   {name:'Live TV 90+ Channels',url:'https://malikjalallivetv.edgeone.app',cat:'tv'},
   {name:'Complete Python Course 100GB',url:'https://indianshortner.in/MHPBl',cat:'dev'},
@@ -307,7 +335,7 @@ setInterval(UDI,5000);UDI();
 function CV(e){var f=e.target.files[0];if(!f)return;var url=URL.createObjectURL(f);var v=document.getElementById('bgVideo');v.src=url;v.classList.add('show');v.loop=true;v.muted=true;v.play().catch(function(){});localStorage.setItem(BGK,url);T('✅ Video playing!')}
 (function(){try{var s=localStorage.getItem(BGK);if(s){var v=document.getElementById('bgVideo');v.src=s;v.classList.add('show');v.loop=true;v.muted=true;v.play().catch(function(){})}}catch(e){}})();
 function CA(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){localStorage.setItem(AUDK,ev.target.result);if(bgAudio)bgAudio.pause();bgAudio=new Audio(ev.target.result);T('✅ Audio saved!')};r.readAsDataURL(f)}
-function PA(){if(bgAudio){bgAudio.currentTime=0;bgAudio.play().catch(function(){})}else{try{var s=localStorage.getItem(AUDK);if(s){bgAudio=new Audio(s);bgAudio.play().catch(function(){})}else{T('No audio!')}}catch(e){T('No audio!')}}}
+function PA(){if(bgAudio){bgAudio.currentTime=0;bgAudio.play().catch(function(){})}else{try{var s=localStorage.getItem(AUDK);if(s){bgAudio=new Audio(s);bgAudio.play().catch(function(){})}else{T('No audio uploaded!')}}catch(e){T('No audio!')}}}
 function playWelcome(){try{var s=localStorage.getItem(AUDK);if(s){if(bgAudio)bgAudio.pause();bgAudio=new Audio(s);bgAudio.play().catch(function(){})}}catch(e){}}
 function SL2(url){var els=document.querySelectorAll('#loginLogo,.header-logo-img');els.forEach(function(el){if(el)el.src=url})}
 function CL(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){SL2(ev.target.result);localStorage.setItem(LOGOK,ev.target.result);T('✅ Logo updated!')};r.readAsDataURL(f)}
@@ -316,16 +344,30 @@ function CLB(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.on
 (function(){try{var s=localStorage.getItem(LOGINBGK);if(s){document.body.style.backgroundImage='url('+s+')';document.body.style.backgroundSize='cover'}}catch(e){}})();
 function ULT(){var t=document.getElementById('lTitle').value;if(t)document.querySelector('.login-card h2').textContent=t;var s=document.getElementById('lSub').value;if(s)document.querySelector('.login-card .sub').textContent=s;var f=document.getElementById('lFooter').value;if(f)document.getElementById('loginFooter').textContent=f;localStorage.setItem(LOGINPAGEK,JSON.stringify({title:t,sub:s,footer:f}))}
 (function(){try{var s=localStorage.getItem(LOGINPAGEK);if(s){var d=JSON.parse(s);if(d.title)document.querySelector('.login-card h2').textContent=d.title;if(d.sub)document.querySelector('.login-card .sub').textContent=d.sub}}catch(e){}})();
-function CP(){var nm=document.getElementById('newMasterPass').value.trim();var na=document.getElementById('newAdminPass').value.trim();if(nm){MP=nm;localStorage.setItem('mj_master_v18',JSON.stringify({u:MU,p:nm}));T('✅ Master password updated!')}if(na){AP=na;localStorage.setItem('mj_admin_v18',na);T('✅ Admin password updated!')}}
-(function(){try{var s=localStorage.getItem('mj_master_v18');if(s){var d=JSON.parse(s);MU=d.u;MP=d.p}}catch(e){};try{var sa=localStorage.getItem('mj_admin_v18');if(sa)AP=sa}catch(e){}})();
-function DL(){var u=document.getElementById('luser').value.trim(),p=document.getElementById('lpass').value,e=document.getElementById('lerr');e.style.display='none';if(!u||!p){e.style.display='block';e.textContent='Enter credentials!';return}if(u===MU&&p===MP){li=true;im=true;cu={username:u,name:'Malik Jalal'};playWelcome();FL();return}var users=GU(),user=users.find(function(x){return x.username===u&&x.password===p});if(user&&user.approved){li=true;im=false;cu=user;playWelcome();FL();return}e.style.display='block';e.textContent='Invalid!';}
+function CP(){var nm=document.getElementById('newMasterPass').value.trim();var na=document.getElementById('newAdminPass').value.trim();if(nm){MP=nm;localStorage.setItem('mj_master_v19',JSON.stringify({u:MU,p:nm}));T('✅ Master password updated!')}if(na){AP=na;localStorage.setItem('mj_admin_v19',na);T('✅ Admin password updated!')}}
+(function(){try{var s=localStorage.getItem('mj_master_v19');if(s){var d=JSON.parse(s);MU=d.u;MP=d.p}}catch(e){};try{var sa=localStorage.getItem('mj_admin_v19');if(sa)AP=sa}catch(e){}})();
+
+// ⭐ LOGIN WITH DEVICE LOCK
+function DL(){
+  var u=document.getElementById('luser').value.trim(),p=document.getElementById('lpass').value,e=document.getElementById('lerr');e.style.display='none';
+  if(!u||!p){e.style.display='block';e.textContent='Enter credentials!';return}
+  if(u===MU&&p===MP){li=true;im=true;cu={username:u,name:'Malik Jalal'};playWelcome();FL();return}
+  var users=GU(),user=users.find(function(x){return x.username===u&&x.password===p});
+  if(user&&user.approved){
+    var dl=checkDeviceLock(u);
+    if(dl==='locked'){e.style.display='block';e.textContent='🔒 This account is active on another device! Contact Malik Jalal.';return}
+    if(dl==='first'){setLockedDevice(u)}
+    li=true;im=false;cu=user;playWelcome();FL();return;
+  }
+  e.style.display='block';e.textContent='Invalid credentials!';
+}
 function FL(){document.getElementById('lo').classList.add('hidden');document.getElementById('ls').classList.add('hidden');document.getElementById('mh').style.display='flex';document.getElementById('ml').style.display='block';document.getElementById('lobtn').style.display='flex';RA();T('✅ Welcome '+cu.name+'!')}
 function DLO(){li=false;im=false;ia=false;cu=null;document.getElementById('lo').classList.remove('hidden');document.getElementById('mh').style.display='none';document.getElementById('ml').style.display='none';document.getElementById('lobtn').style.display='none'}
 function RA(){RC();RT()}
 function RC(){var cats=['all','dev','hacking','ai','earning','editing','design','marketing','misc','islamic'];document.getElementById('cb').innerHTML=cats.map(function(c){return '<button class="cat-btn'+(cc===c?' active':'')+'" onclick="FC(\''+c+'\')">'+(catNames[c]||c)+'</button>';}).join('');}
-function RT(){var tools=GT(),f=cc==='all'?tools:tools.filter(function(t){return t.cat===cc});var q=document.getElementById('sq').value.toLowerCase();if(q)f=f.filter(function(t){return t.name.toLowerCase().indexOf(q)!==-1});var g=document.getElementById('tg');if(!f.length){g.innerHTML='<div style="text-align:center;padding:40px;color:var(--mut);grid-column:1/-1">🔍 No tools found</div>';return}g.innerHTML=f.map(function(t,i){var cc2=catColors[t.cat]||'#94a3b8';return '<a href="'+t.url+'" target="_blank" class="tool-card"><span class="cat-badge" style="background:'+cc2+'18;color:'+cc2+'">'+(catNames[t.cat]||t.cat)+'</span><h4>'+t.name+'</h4><span class="dot"></span><span class="dl-btn">ACCESS TOOL</span></a>';}).join('');}
+function RT(){var tools=GT(),f=cc==='all'?tools:tools.filter(function(t){return t.cat===cc});var q=document.getElementById('sq').value.toLowerCase();if(q)f=f.filter(function(t){return t.name.toLowerCase().indexOf(q)!==-1});var g=document.getElementById('tg');if(!f.length){g.innerHTML='<div style="text-align:center;padding:40px;color:var(--mut);grid-column:1/-1">🔍 Not found</div>';return}g.innerHTML=f.map(function(t,i){var cc2=catColors[t.cat]||'#94a3b8';return '<a href="'+t.url+'" target="_blank" class="tool-card"><span class="cat-badge" style="background:'+cc2+'18;color:'+cc2+'">'+(catNames[t.cat]||t.cat)+'</span><h4>'+t.name+'</h4><span class="dot"></span><span class="dl-btn">ACCESS TOOL</span></a>';}).join('');}
 function FC(cat){cc=cat;RC();RT()}function RF(){RT()}function NC(){cc='all';document.getElementById('sq').value='';RC();RT()}
-function OA(){if(!im)return T('Master only!');var p=prompt('Admin Password:');if(p===AP){ia=true;document.getElementById('ap').classList.add('show');RAL();RUL();T('Admin')}else{T('Wrong')}}
+function OA(){if(!im)return T('Master only!');var p=prompt('Admin Password:');if(p===AP){ia=true;document.getElementById('ap').classList.add('show');RAL();RUL();T('Admin Unlocked')}else{T('Wrong!')}}
 function RAL(){var tools=GT();document.getElementById('atlist').innerHTML=tools.map(function(t,i){return '<div style="background:var(--card2);padding:6px 8px;margin:3px 0;border-radius:6px;display:flex;align-items:center;gap:8px"><div style="flex:1"><strong style="font-size:.65rem">'+t.name+'</strong><br><small style="color:var(--mut)">'+(catNames[t.cat]||t.cat)+'</small></div><button class="btn-edit" onclick="OE('+i+')">✏️</button><button class="btn-del" onclick="DT('+i+')">🗑</button></div>';}).join('');}
 function RUL(){var users=GU();var h='';if(!users.length){h='<p style="font-size:.65rem;color:var(--mut)">No users.</p>'}else{users.forEach(function(u){h+='<div style="background:var(--card2);padding:6px 8px;margin:3px 0;border-radius:6px"><strong style="font-size:.65rem">'+u.name+'</strong> <small style="color:var(--mut)">| '+u.username+' | '+u.phone+'</small></div>'})}document.getElementById('ulist').innerHTML=h}
 function AMU(){var n=prompt('Name:');if(!n)return;var ph=prompt('Phone:');if(!ph)return;var un=prompt('Username:');if(!un)return;var pw=prompt('Pass (4+):');if(!pw||pw.length<4)return;var users=GU();users.push({name:n,phone:ph,username:un,password:pw,approved:true});SU(users);RUL();T('Added')}
