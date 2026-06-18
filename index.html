@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
 <video id="bgVideo" loop muted playsinline autoplay></video>
 
-<!-- ⭐ IP ADDRESS ADDED -->
+<!-- ⭐ DEVICE INFO BAR (PUBLIC) -->
 <div class="device-info" id="deviceInfo">
   <span id="devTime">--:--</span>
   <span id="devBattery">🔋 --%</span>
@@ -70,6 +70,13 @@
 </div>
 
 <div class="main-layout" id="ml" style="display:none">
+
+  <!-- ⭐ ADMIN ONLY DASHBOARD (Sirf Malik Jalal ke liye) -->
+  <div id="adminDashboard" style="display:none; background:linear-gradient(135deg,#1a1030,#2d1b69); border:1px solid rgba(245,158,11,.4); border-radius:14px; padding:14px 18px; margin-bottom:14px; font-size:.68rem; color:#f59e0b; text-align:center; box-shadow:0 4px 20px rgba(245,158,11,.15);">
+    <strong style="font-size:.75rem">👑 Malik Jalal Admin Dashboard</strong><br>
+    <span id="adminInfo" style="color:#e2e8f0">Loading...</span>
+  </div>
+
   <div class="search-wrap"><input id="sq" oninput="RF()" placeholder="🔍 Search 417+ tools..." type="text"><i class="fas fa-search"></i></div>
   <div class="cats" id="cb"></div>
   <a class="quran-banner" href="https://malikjalal-quranpak.edgeone.app" target="_blank"><span style="font-size:1.8rem">🕌</span><div><strong>📖 Quran Pak</strong><br><small>Audio • Translation</small></div></a>
@@ -134,6 +141,6 @@
 <div class="toast" id="toast"></div>
 
 <!-- ⭐ CACHE BUSTER -->
-<script src="script.js?v=3"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>
