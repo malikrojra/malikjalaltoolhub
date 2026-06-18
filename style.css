@@ -34,7 +34,6 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 .cat-btn{padding:6px 14px;border:1px solid var(--bdr);border-radius:50px;background:var(--card);color:var(--mut);cursor:pointer;font-size:.68rem;font-weight:700;white-space:nowrap;flex-shrink:0;font-family:inherit;transition:all .2s}
 .cat-btn.active,.cat-btn:hover{background:var(--acc);border-color:var(--acc);color:#fff}
 .quran-banner{background:linear-gradient(135deg,#0d4a2a,#1a6b3a);margin-bottom:14px;border-radius:var(--r);padding:14px;display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;border:1px solid rgba(34,197,94,.2)}
-.quran-banner:hover{box-shadow:0 8px 25px rgba(34,197,94,.15)}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;padding-bottom:20px}
 .tool-card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:18px 14px;text-align:left;cursor:pointer;text-decoration:none;color:var(--txt);transition:all .3s;display:flex;flex-direction:column;gap:12px;min-height:150px;position:relative}
 .tool-card:hover{border-color:rgba(59,130,246,.4);transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.4)}
